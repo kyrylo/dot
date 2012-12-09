@@ -44,7 +44,7 @@ backup_file xinitrc          ~/.xinitrc
 backup_file Xresources       ~/.Xresources
 backup_file zshrc.sh         ~/.zshrc
 backup_file ncmpcpp.conf     ~/.ncmpcpp/config
-backup_file elinks.conf      ~/.elinks/config
+backup_file elinks.conf      ~/.elinks/elinks.conf
 backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
 
