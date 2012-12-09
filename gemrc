@@ -1,0 +1,10 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+---
+:backtrace: false
+:sources:
+  - http://gemcutter.org
+:update_sources: true
+:verbose: true
+gem: --user-install --no-ri --no-rdoc

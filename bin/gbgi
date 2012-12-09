@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+#
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Build a gemspec in the current directory and install that gem.
+gem build *.gemspec && gem install *.gem

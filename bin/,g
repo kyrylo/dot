@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+# Invoke Google on the terminal. Kudos to rking. ☺
+elinks http://www.google.com/search?q="$*"

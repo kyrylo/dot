@@ -1,0 +1,7 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+--pager=less -R -S -F -X
+--color-filename=green on_black
+--color-match=red
+--color-lineno=bright_green

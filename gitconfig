@@ -1,0 +1,28 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+[user]
+	name = Kyrylo Silin
+	email = kyrylosilin@gmail.com
+[github]
+	user = kyrylo
+[color]
+	ui = true
+[color "diff"]
+	meta = 244 bold
+	frag = 61
+	old = 241 bold
+	new = 37 bold
+[color "branch"]
+	current = 230 bold
+	local = 136 bold
+	remote = 166 bold
+[color "status"]
+	added = 166 bold
+	changed = 64 bold
+	untracked = 61 bold
+	unmerged = 136 bold
+[color "grep"]
+	match = 166 bold
+[core]
+	editor = gvim -f

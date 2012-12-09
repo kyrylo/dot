@@ -1,0 +1,11 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+"amixer set Master 2- unmute"
+XF86AudioLowerVolume
+
+"amixer set Master 2+ unmute"
+XF86AudioRaiseVolume
+
+"amixer set Master toggle"
+XF86AudioMute

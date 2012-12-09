@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+# Outputs 256 colors to $stdout.
+0.upto(255).each{|c|q=%Q(\e[38;5;#{c}m#{c}\e[0m );c==255?puts(q):print(q)}

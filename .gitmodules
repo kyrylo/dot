@@ -1,0 +1,60 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "vim/bundle/endwise"]
+	path = vim/bundle/endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/indent-guides"]
+	path = vim/bundle/indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ragtag"]
+	path = vim/bundle/ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/zencoding"]
+	path = vim/bundle/zencoding
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/mac-classic"]
+	path = vim/bundle/mac-classic
+	url = git://github.com/nelstrom/vim-mac-classic-theme.git
+[submodule "vim/bundle/xoria256"]
+	path = vim/bundle/xoria256
+	url = git://github.com/vim-scripts/xoria256.vim.git
+[submodule "vim/bundle/haml"]
+	path = vim/bundle/haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "vim/bundle/haskell"]
+	path = vim/bundle/haskell
+	url = git://github.com/wlangstroth/vim-haskell.git
+[submodule "vim/bundle/ruby"]
+	path = vim/bundle/ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/javascript"]
+	path = vim/bundle/javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "vim/bundle/bubblegum"]
+	path = vim/bundle/bubblegum
+	url = git://github.com/baskerville/bubblegum.git
+[submodule "vim/bundle/autoclose"]
+	path = vim/bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/sh"]
+	path = vim/bundle/sh
+	url = git://github.com/vim-scripts/sh.vim.git
+[submodule "vim/bundle/zenburn"]
+	path = vim/bundle/zenburn
+	url = git://github.com/jnurmine/Zenburn.git

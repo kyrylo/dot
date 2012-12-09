@@ -1,0 +1,14 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+---
+session:
+  name: "1337"
+  windows:
+    - name: "weechat"
+      splits:
+        - cmd: "weechat-curses"
+    - name: "ncmpcpp"
+      splits:
+        - cmd: "ncmpcpp"

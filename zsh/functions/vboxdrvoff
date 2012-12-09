@@ -1,0 +1,3 @@
+sudo rmmod vboxnetflt
+sudo rmmod vboxnetadp
+sudo rmmod vboxdrv
