@@ -112,6 +112,9 @@ bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^D' backward-delete-char
 
+# Vi editing mode.
+bindkey -v
+
 # Custom functions.
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
