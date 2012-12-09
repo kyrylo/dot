@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+#
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Uninstalls all installed gems.
+# http://nphusion.com/2009/01/14/remove-all-ruby-gems/
+gems=$(gem list | cut -d" " -f1)
+
+if [[ -n "$gems" ]]; then
+  echo $gems | xargs gem uninstall -aIx
+else
+  echo 'dot: no gems installed'
+fi
