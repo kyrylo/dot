@@ -38,7 +38,7 @@ backup_file pryrc            ~/.pryrc
 backup_file gitconfig        ~/.gitconfig
 backup_file gvimrc           ~/.gvimrc
 backup_file vimrc            ~/.vimrc
-backup_file tmux.conf        ~/.tmuxcont
+backup_file tmux.conf        ~/.tmux.conf
 backup_file xbindkeysrc      ~/.xbindkeysrc
 backup_file xinitrc          ~/.xinitrc
 backup_file Xresources       ~/.Xresources
