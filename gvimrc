@@ -35,6 +35,9 @@ set backup
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
 
+" Unmap the retarted key. I always accidentally press it.
+map K <Nop>
+
 " Check spelling for English and Russian languages.
 map <F2> <Esc>:setlocal spell! spelllang=ru,en<CR>
 
