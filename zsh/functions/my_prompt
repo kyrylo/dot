@@ -1,0 +1,18 @@
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' unstagedstr '%F{12}●'
+zstyle ':vcs_info:git:*' stagedstr '%F{10}●'
+
+precmd()
+{
+  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+    zstyle ':vcs_info:*' formats '%u%c'
+  } else {
+    zstyle ':vcs_info:*' formats '%u%c%F{8}●'
+  }
+  vcs_info
+}
