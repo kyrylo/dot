@@ -35,8 +35,6 @@ set backup
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
 
-let mapleader=","
-
 " Check spelling for English and Russian languages.
 map <F2> <Esc>:setlocal spell! spelllang=ru,en<CR>
 

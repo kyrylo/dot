@@ -7,6 +7,10 @@
 " and not from there (.gvimrc). I HATE SOFTWARE.
 call pathogen#infect()
 
+" DOH! Don't move it from this file, cos it won't work with if you put it in
+" .gvimrc. BLOODY BUGGERING HELL, I don't use *VIM*, I use GVIM!
+let mapleader=","
+
 syntax on
 
 " Enable file type detection.
