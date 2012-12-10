@@ -8,7 +8,7 @@ export HISTSIZE=25000
 export SAVEHIST=25000
 export REPORTTIME=10
 export NO_PRY_COLORED_BACON=true
-export PS1='%F{37}%3~$(git_info_for_prompt)%#%f '
+export PS1='%F{12}%3~$(git_info_for_prompt)%#%f '
 
 # Don't use any fucking proxies FFS!
 unset http_proxy
