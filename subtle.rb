@@ -2,9 +2,6 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
-
-# + Options
-
 set :step,      5
 set :snap,      10
 set :gravity,   :center
@@ -15,18 +12,9 @@ set :tiling,    false
 # Set the WM_NAME of subtle (Java quirk)
 # set :wmname, "LG3D"
 
-# + Screen
-
 screen 1 do
-  top    [ :views, :title, :spacer, :keychain, :spacer, :tray, :sublets ]
+  top [ :views, :title, :spacer, :keychain, :spacer, :tray, :sublets ]
 end
-
-# + Styles
-
-bg_panel = "#002b36"
-bg = "#002b36"
-white = "#eee8d5"
-blue = "#58B2A3"
 
 style :separator do
   separator " · "
@@ -35,17 +23,17 @@ end
 style :all do
   font       "xft:Russo One-8:antialias=true:hinting=true:hintstyle=hintmedium"
   padding     0, 2, 0, 2
-  foreground  white
-  background  bg_panel
+  foreground  '#9fafaf'
+  background  '#000000'
 end
 
 style :title do
-  foreground  "#2aa198"
+  foreground '#dca3a3'
 end
 
 style :views do
   style :focus do
-    foreground  "#268bd2"
+    foreground  '#ffffff'
   end
 
   style :occupied do
@@ -62,9 +50,9 @@ style :clients do
 end
 
 style :subtle do
-  panel       bg
-  background  bg
-  border "#ffffff", 50
+  panel       '#000000'
+  background  '#000000'
+  border      '#ffffff', 50
 end
 
 # + Gravities
