@@ -48,7 +48,6 @@ backup_file ncmpcpp.conf     ~/.ncmpcpp/config
 backup_file elinks.conf      ~/.elinks/elinks.conf
 backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
-backup_file inputrc          ~/.inputrc
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf
