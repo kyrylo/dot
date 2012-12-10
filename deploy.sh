@@ -7,6 +7,7 @@ mkdir -p ~/.dot_backup
 
 backup_file()
 {
+  echo $2
   if [[ -e $2 ]]; then
     cp --no-dereference $2 ~/.dot_backup
     rm $2
@@ -30,7 +31,7 @@ mkdir -p ~/.bin/
 mkdir -p ~/.ncmpcpp/
 mkdir -p ~/.elinks/
 mkdir -p ~/.teamocil/
-mkdir -p ~/.weechat/perl/autoload
+mkdir -p ~/.weechat/{perl,python}/autoload
 
 backup_file ackrc            ~/.ackrc
 backup_file gemrc            ~/.gemrc
@@ -49,8 +50,13 @@ backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
 backup_file inputrc          ~/.inputrc
 
-backup_file weechat/weechat.conf ~/.weechat/weechat.conf
+for conf in weechat/*.conf; do
+  backup_file $conf ~/.$conf
+done
+
 backup_file weechat/perl/autoload/buffers.pl ~/.weechat/perl/autoload/buffers.pl
+backup_file weechat/python/autoload/shell.py ~/.weechat/python/autoload/shell.py
+backup_file weechat/python/autoload/colored_nicks.py ~/.weechat/python/autoload/colored_nicks.py
 
 backup_dir zsh/     ~/.zsh
 backup_dir vim      ~/.vim
