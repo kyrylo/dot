@@ -47,11 +47,13 @@ style :views do
 end
 
 style :clients do
+  #active   '#ffffff', 2
+  #inactive '#000000', 2
 end
 
 style :subtle do
   panel       '#000000'
-  background  '#000000'
+  #background  '#000000'
   border      '#ffffff', 50
 end
 
