@@ -10,8 +10,8 @@ export REPORTTIME=10
 export NO_PRY_COLORED_BACON=true
 
 . ~/.zsh/functions/my_prompt
-export PS1='%F{8}$(rbenv version-name) ${vcs_info_msg_0_} %F{3}$(git log -n 1 --pretty=oneline --abbrev-commit)
-%F{12}%3~$(git_info_for_prompt)%#%f '
+export PS1='%F{12}%3~$(git_info_for_prompt)%#%f '
+export RPS1='${vcs_info_msg_0_} %F{8}$(rbenv version-name)'
 
 # Don't use any fucking proxies FFS!
 unset http_proxy
