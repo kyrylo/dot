@@ -46,9 +46,6 @@
 [submodule "vim/bundle/bubblegum"]
 	path = vim/bundle/bubblegum
 	url = git://github.com/baskerville/bubblegum.git
-[submodule "vim/bundle/autoclose"]
-	path = vim/bundle/autoclose
-	url = git://github.com/Townk/vim-autoclose.git
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -58,3 +55,6 @@
 [submodule "vim/bundle/zenburn"]
 	path = vim/bundle/zenburn
 	url = git://github.com/jnurmine/Zenburn.git
+[submodule "vim/bundle/autoclose"]
+	path = vim/bundle/autoclose
+	url = git://github.com/vim-scripts/AutoClose.git
