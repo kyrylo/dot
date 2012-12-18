@@ -1,7 +1,7 @@
 " Kyrylo Silin -->
 "                 https://github.com/kyrylo/dot
 "                                              <-- kyrylosilin@gmail.com
-colorscheme zenburn
+colorscheme xoria256
 set guifont=DejavuSansMono\ 7.5
 set background=dark
 set fileformats=unix,dos,mac

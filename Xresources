@@ -22,55 +22,55 @@ URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher       : chromium
 URxvt.matcher.button    : 1
 
-! Zenburn colours in place of default crappy ones.
-! Black dark/light.
-URxvt*color0: #000000
-URxvt*color8: #666666
+! Xoria256 colours in place of default crappy ones.
+!black.normal     : xoria256.LineNr.guibg
+!black.bright     : black.normal.rgb - 8
+URxvt.color0      : #121212
+URxvt.color8      : #0a0a0a
 
-! Red dark/light.
-URxvt*color1: #9e1828
-URxvt*color9: #cf6171
+!red.normal       : red.bright.r - 8
+!red.bright       : xoria256.Special.guifg
+URxvt.color1      : #d78787
+URxvt.color9      : #df8787
 
-! Green dark/light.
-URxvt*color2: #aece92
-URxvt*color10: #c5f779
+!green.normal     : green.bright.g - 8
+!green.bright     : xoria256.PreProc.guifg
+URxvt.color2      : #afd787
+URxvt.color10     : #afdf87
 
-! Yellow dark/light.
-URxvt*color3: #968a38
-URxvt*color11: #fff796
+!yellow.normal    : yellow.bright.rg - 8
+!yellow.bright    : xoria256.Special.guifg
+URxvt.color3      : #f7f7af
+URxvt.color11     : #ffffaf
 
-! Blue dark/light.
-URxvt*color4: #414171
-URxvt*color12: #4186be
+!blue.normal      : blue.bright.b - 8
+!blue.bright      : xoria256.Statement.guifg
+URxvt.color4      : #87afd7
+URxvt.color12     : #87afdf
 
-! Magenta dark/light.
-URxvt*color5: #963c59
-URxvt*color13: #cf9ebe
+!magenta.normal   : magenta.bright.rb - 8
+!magenta.bright   : xoria256.Identifier.guifg
+URxvt.color5      : #d7afd7
+URxvt.color13     : #dfafdf
 
-! Cyan dark/light.
-URxvt*color6: #418179
-URxvt*color14: #71bebe
+!cyan.normal      : cyan.bright.gb - 8
+!cyan.bright      : green.bright + blue.bright
+URxvt.color6      : #afd7d7
+URxvt.color14     : #afdfdf
 
-! White dark/light.
-URxvt*color7: #bebebe
-URxvt*color15: #ffffff
+!white.normal     : white.bright.rgb - 8
+!white.bright     : xoria256.Folded.guifg
+URxvt.color7      : #e6e6e6
+URxvt.color15     : #eeeeee
 
-XTerm*background: #000010
-XTerm*foreground: #ffffff
-XTerm*color0: #000000
-XTerm*color1: #9e1828
-XTerm*color2: #aece92
-XTerm*color3: #968a38
-XTerm*color4: #414171
-XTerm*color5: #963c59
-XTerm*color6: #418179
-XTerm*color7: #bebebe
-XTerm*color8: #666666
-XTerm*color9: #cf6171
-XTerm*color10: #c5f779
-XTerm*color11: #fff796
-XTerm*color12: #4186be
-XTerm*color13: #cf9ebe
-XTerm*color14: #71bebe
-XTerm*color15: #ffffff
-XTerm*cursorColor: magenta
+!foreground       : xoria256.Normal.guifg
+!background       : xoria256.Normal.guibg
+!cursor           : xoria256.Cursor.guibg
+URxvt.foreground  : #d0d0d0
+URxvt.background  : #1c1c1c
+URxvt.cursorColor : #ffaf00
+
+!bold             : xoria256.Type.guifg
+!underline        : xoria256.htmlValue.guifg
+URxvt.colorBD     : #afafdf
+URxvt.colorUL     : #dfdfaf
