@@ -61,3 +61,6 @@ map \ :split<CR>
 
 " Divides screen into two *vertical* panes.
 map \| :vsplit<CR>
+
+" Fix for xoria256
+highlight ColorColumn guibg=#1c1c1c
