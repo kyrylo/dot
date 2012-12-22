@@ -1,7 +1,6 @@
 " Kyrylo Silin -->
 "                 https://github.com/kyrylo/dot
 "                                              <-- kyrylosilin@gmail.com
-
 " =========> Gvim compatibility zone.
 "
 " FUCK FUCK FUCK!!!
@@ -78,6 +77,12 @@ map \ :split<CR>
 
 " Divides screen into two *vertical* panes.
 map \| :vsplit<CR>
+
+" Resizing a window split.
+map <silent> - <C-W>-
+map <silent> = <C-W>+
+map <silent> _ <C-w><
+map <silent> + <C-w>>"
 
 " Fix for xoria256
 highlight ColorColumn ctermbg=237
