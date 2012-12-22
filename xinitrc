@@ -24,7 +24,7 @@ xbindkeys
 setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:scroll,compose:ralt"
 
 # Use a wallpaper.
-feh --bg-scale ~/pictures/wallpaper.jpg
+feh --bg-scale ~/pictures/wallpaper.png
 
 # Run systemd as user intsance.
 systemd --user &
