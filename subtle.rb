@@ -2,6 +2,14 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
+require 'pathname'
+ICONS_ROOT = Pathname.new(File.expand_path('~/.config/subtle/icons'))
+
+def xbm(icon)
+  icon = icon + '.xbm'
+  (ICONS_ROOT + icon).to_s
+end
+
 set :step,      5
 set :snap,      10
 set :gravity,   :center
@@ -17,12 +25,12 @@ screen 1 do
 end
 
 style :separator do
-  separator " · "
+  separator '·'
 end
 
 style :all do
   font       "xft:Russo One-8:antialias=true:hinting=true:hintstyle=hintmedium"
-  padding     0, 2, 0, 2
+  padding     0, 4, 0, 4
   foreground  '#9fafaf'
   background  '#000000'
 end
@@ -33,10 +41,13 @@ end
 
 style :views do
   style :focus do
-    foreground  '#ffffff'
+    foreground  '#f7e7de'
+    border_bottom '#c47858', 1
+    background '#4f220e'
   end
 
   style :occupied do
+    foreground  '#f7e7de'
   end
 
   style :urgent do
@@ -47,8 +58,8 @@ style :views do
 end
 
 style :clients do
-  #active   '#ffffff', 2
-  #inactive '#000000', 2
+  active   '#302f2e', 1
+  inactive '#0f0f0f', 1
 end
 
 style :subtle do
@@ -174,6 +185,7 @@ end
 tag "browser" do
   browsers = "navigator|chrom[e|ium]|opera"
   match browsers
+  borderless true
 end
 
 tag "dev_editor" do
@@ -246,13 +258,35 @@ end
 
 # + Views
 
-view "trm", "terms"
-view "web", "browser"
-view "dev", "dev_.*"
-view "pnt", "paint_.*"
-view "vrt", "vrt|default"
+view 'trm' do
+  match 'terms'
+  icon xbm('terminal')
+  icon_only true
+end
 
-# + Sublets
+view 'web' do
+  match 'browser'
+  icon xbm('world')
+  icon_only true
+end
+
+view 'dev' do
+  match 'dev_.*'
+  icon xbm('wrench')
+  icon_only true
+end
+
+view 'pnt' do
+  match 'paint_.*'
+  icon xbm('pencil')
+  icon_only true
+end
+
+view 'default' do
+  match 'vrt|default'
+  icon xbm('house')
+  icon_only true
+end
 
 sublet :mpd do
   show_icons false
@@ -261,8 +295,4 @@ end
 sublet :clock do
   interval 1
   format_string "%H:%M %a %d"
-end
-
-sublet :cpu do
-  interval 2
 end
