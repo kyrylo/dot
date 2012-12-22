@@ -1,7 +1,7 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
-export EDITOR=gvim
+export EDITOR=vim
 export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
@@ -11,7 +11,7 @@ export NO_PRY_COLORED_BACON=true
 
 . ~/.zsh/functions/my_prompt
 export PS1='%F{12}%3~$(git_info_for_prompt)%#%f '
-export RPS1='${vcs_info_msg_0_} %F{8}$(rbenv version-name)'
+# export RPS1='${vcs_info_msg_0_} %F{8}$(rbenv version-name)'
 
 # Don't use any fucking proxies FFS!
 unset http_proxy
