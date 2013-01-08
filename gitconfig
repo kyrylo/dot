@@ -25,4 +25,4 @@
 [color "grep"]
 	match = 166 bold
 [core]
-	editor = gvim -f
+	editor = vim -f

@@ -20,7 +20,8 @@ filetype plugin indent on
 "
 " =========> End of Gvim compatibility zone.
 
-set term=builtin_ansi " Fix broken arrow key navigation in insert mode
+" Fix broken arrow key navigation in insert mode (breaks F[1-9] maps).
+"set term=builtin_ansi
 set t_Co=256 " Use 256 colours.
 set background=dark
 colorscheme xoria256
@@ -50,6 +51,7 @@ set fileencodings=utf8,cp1251
 set backup
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
+set mouse=a
 
 " Unmap the retarted key. I always accidentally press it.
 map K <Nop>
