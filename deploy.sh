@@ -55,7 +55,7 @@ done
 
 backup_file weechat/perl/autoload/buffers.pl ~/.weechat/perl/autoload/buffers.pl
 backup_file weechat/python/autoload/shell.py ~/.weechat/python/autoload/shell.py
-backup_file weechat/python/autoload/colored_nicks.py ~/.weechat/python/autoload/colored_nicks.py
+backup_file weechat/python/autoload/colorize_nicks.py ~/.weechat/python/autoload/colorize_nicks.py
 
 backup_dir zsh/     ~/.zsh
 backup_dir vim      ~/.vim
