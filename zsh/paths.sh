@@ -1,6 +1,8 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
+export PATH="/bin:$PATH"
+
 # Custom executables.
 export PATH="$HOME/.bin:$PATH"
 
