@@ -7,11 +7,11 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
 export SAVEHIST=25000
 export REPORTTIME=10
-export NO_PRY_COLORED_BACON=true
+#export NO_PRY_COLORED_BACON=true
 
 . ~/.zsh/functions/my_prompt
 export PS1='%F{12}%3~$(git_info_for_prompt)%#%f '
-# export RPS1='${vcs_info_msg_0_} %F{8}$(rbenv version-name)'
+export RPS1='${vcs_info_msg_0_}'
 
 # Don't use any fucking proxies FFS!
 unset http_proxy
@@ -125,3 +125,6 @@ autoload -U ~/.zsh/functions/*(:t)
 # Converts '...' to '../..' (inline).
 autoload -Uz manydots-magic
 manydots-magic
+
+#. /usr/local/share/chruby/chruby.sh
+chruby 1.9.3
