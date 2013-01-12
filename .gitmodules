@@ -61,6 +61,6 @@
 [submodule "git-aliae"]
 	path = git-aliae
 	url = git@github.com:ConradIrwin/git-aliae.git
-[submodule "/home/curacao/.dot/vim/bundle/align"]
-	path = /home/curacao/.dot/vim/bundle/align
+[submodule "vim/bundle/align"]
+	path = vim/bundle/align
 	url = git@github.com:vim-scripts/Align.git
