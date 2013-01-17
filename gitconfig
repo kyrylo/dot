@@ -20,7 +20,7 @@
 [color "status"]
 	added = 10 bold
 	changed = 4 bold
-	untracked = 8 bold
+	untracked = 5 bold
 	unmerged = 136 bold
 [color "grep"]
 	match = 166 bold
