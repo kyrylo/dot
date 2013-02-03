@@ -3,6 +3,6 @@
 "                                              <-- kyrylosilin@gmail.com
 setlocal autoindent
 setlocal cindent
-setlocal shiftwidth=8
-setlocal softtabstop=8
-setlocal noexpandtab
+setlocal shiftwidth=4
+setlocal softtabstop=4
+setlocal expandtab
