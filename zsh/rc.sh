@@ -126,5 +126,5 @@ autoload -U ~/.zsh/functions/*(:t)
 autoload -Uz manydots-magic
 manydots-magic
 
-#. /usr/local/share/chruby/chruby.sh
+. /usr/share/chruby/chruby.sh
 chruby 1.9.3
