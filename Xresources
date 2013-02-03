@@ -19,7 +19,7 @@ URxvt.perl-ext:
 URxvt.perl-ext-common:  default,matcher
 
 ! Clickable URLs.
-URxvt.urlLauncher       : chromium
+URxvt.url-launcher       : chromium
 URxvt.matcher.button    : 1
 
 ! Xoria256 colours in place of default crappy ones.
