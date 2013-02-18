@@ -31,4 +31,3 @@ systemd --user &
 
 # Launch window manager.
 exec ck-launch-session subtle
-#exec ck-launch-session xmonad
