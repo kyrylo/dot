@@ -189,7 +189,7 @@ tag "browser" do
 end
 
 tag "dev_editor" do
-  match  "[g]?vim|Komodo"
+  match  "[g]?vim|Komodo|emacs"
   resize true
 end
 
