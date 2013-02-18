@@ -2,7 +2,7 @@
 !                 https://github.com/kyrylo/dot
 !                                              <-- kyrylosilin@gmail.com
 Xcursor.theme: Neutral
-URxvt.font: xft:DejavuSansMono:size=7.5:antialias=true
+URxvt.font: xft:Monaco:size=7.5:antialias=true
 URxvt*background: #000010
 URxvt*foreground: Wheat
 URxvt*cursorColor: magenta
