@@ -9,6 +9,9 @@ export SAVEHIST=25000
 export REPORTTIME=10
 #export NO_PRY_COLORED_BACON=true
 
+# Enables "~/.XCompose" for Chromium and some other GTK apps.
+export GTK_IM_MODULE=xim
+
 . ~/.zsh/functions/my_prompt
 export PS1='%F{12}%3~$(git_info_for_prompt)%#%f '
 export RPS1='${vcs_info_msg_0_}'
