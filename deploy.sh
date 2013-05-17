@@ -60,5 +60,6 @@ backup_file weechat/python/autoload/colorize_nicks.py ~/.weechat/python/autoload
 backup_dir zsh/     ~/.zsh
 backup_dir vim      ~/.vim
 backup_dir fonts    ~/.fonts
+backup_dir emacs.d  ~/.emacs.d
 
 echo 'Done!'
