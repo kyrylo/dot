@@ -86,6 +86,9 @@ map <silent> = <C-W>+
 map <silent> _ <C-w><
 map <silent> + <C-w>>"
 
+" FuzzyFinder plugin.
+map <Leader>t :FufFile<CR>
+
 " Fix for xoria256
 highlight ColorColumn ctermbg=237
 
