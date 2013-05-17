@@ -74,3 +74,6 @@ URxvt.cursorColor : #ffaf00
 !underline        : xoria256.htmlValue.guifg
 URxvt.colorBD     : #afafdf
 URxvt.colorUL     : #dfdfaf
+
+Emacs.font: Dejavu Sans Mono:size=8:antialias=true
+Emacs.fontBackend: xft

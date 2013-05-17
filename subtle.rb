@@ -189,8 +189,13 @@ tag "browser" do
 end
 
 tag "dev_editor" do
-  match  "[g]?vim|Komodo|emacs"
+  match  "[g]?vim|Komodo"
   resize true
+end
+
+tag "dev_emacs" do
+  match "emacs"
+  gravity :center
 end
 
 tag "fixed" do
