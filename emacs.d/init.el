@@ -15,3 +15,4 @@
 (load-file (config-file "look.el"))
 (load-file (config-file "editing.el"))
 (load-file (config-file "backup.el"))
+(load-file (config-file "elpa.el"))
