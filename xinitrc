@@ -31,4 +31,4 @@ feh --bg-scale ~/pictures/wallpaper.png
 #systemd --user &
 
 # Launch window manager.
-exec ck-launch-session subtle
+exec subtle
