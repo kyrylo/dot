@@ -4,7 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Version: 2.0
+;; Version: 20130523.1753
+;; X-Original-Version: 2.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -279,14 +280,41 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(eshell-ls-special ((t (:foreground ,zenburn-yellow :weight bold))))
    `(eshell-ls-symlink ((t (:foreground ,zenburn-cyan :weight bold))))
 ;;;;; flycheck
-   `(flycheck-error-face ((t (:foreground ,zenburn-red-1 :weight bold :underline t))))
-   `(flycheck-warning-face ((t (:foreground ,zenburn-orange :weight bold :underline t))))
+   `(flycheck-error
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-red) :inherit unspecified))
+      (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+   `(flycheck-warning
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-orange) :inherit unspecified))
+      (t (:foreground ,zenburn-orange :weight bold :underline t))))
+   `(flycheck-fringe-error ((t (:foreground ,zenburn-red-1 :weight bold))))
+   `(flycheck-fringe-warning ((t (:foreground ,zenburn-orange :weight bold))))
 ;;;;; flymake
-   `(flymake-errline ((t (:foreground ,zenburn-red-1 :weight bold :underline t))))
-   `(flymake-warnline ((t (:foreground ,zenburn-orange :weight bold :underline t))))
+   `(flymake-errline
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-red)
+                   :inherit unspecified :foreground unspecified :background unspecified))
+      (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+   `(flymake-warnline
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-orange)
+                   :inherit unspecified :foreground unspecified :background unspecified))
+      (t (:foreground ,zenburn-orange :weight bold :underline t))))
+   `(flymake-infoline
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-green)
+                   :inherit unspecified :foreground unspecified :background unspecified))
+      (t (:foreground ,zenburn-green-1 :weight bold :underline t))))
 ;;;;; flyspell
-   `(flyspell-duplicate ((t (:foreground ,zenburn-orange :weight bold :underline t))))
-   `(flyspell-incorrect ((t (:foreground ,zenburn-red-1 :weight bold :underline t))))
+   `(flyspell-duplicate
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-orange) :inherit unspecified))
+      (t (:foreground ,zenburn-orange :weight bold :underline t))))
+   `(flyspell-incorrect
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,zenburn-red) :inherit unspecified))
+      (t (:foreground ,zenburn-red-1 :weight bold :underline t))))
 ;;;;; erc
    `(erc-action-face ((t (:inherit erc-default-face))))
    `(erc-bold-face ((t (:weight bold))))
@@ -769,30 +797,21 @@ This requires library `rainbow-mode'.")
 
 (defvar zenburn-colors-font-lock-keywords nil)
 
-;;;###autoload
-(defun zenburn-turn-on-rainbow-mode ()
-  "Turn on Rainbow mode if it is available."
-  (when (require 'rainbow-mode nil t)
-    (rainbow-mode 1)))
+;; (defadvice rainbow-turn-on (after zenburn activate)
+;;   "Maybe also add font-lock keywords for zenburn colors."
+;;   (when (and (derived-mode-p 'emacs-lisp-mode)
+;;              (or zenburn-add-font-lock-keywords
+;;                  (equal (file-name-nondirectory (buffer-file-name))
+;;                         "zenburn-theme.el")))
+;;     (unless zenburn-colors-font-lock-keywords
+;;       (setq zenburn-colors-font-lock-keywords
+;;             `((,(regexp-opt (mapcar 'car zenburn-colors-alist) 'words)
+;;                (0 (rainbow-colorize-by-assoc zenburn-colors-alist))))))
+;;     (font-lock-add-keywords nil zenburn-colors-font-lock-keywords)))
 
-;;;###autoload
-(put 'zenburn-turn-on-rainbow-mode 'safe-local-eval-function t)
-
-(defadvice rainbow-turn-on (after zenburn activate)
-  "Maybe also add font-lock keywords for zenburn colors."
-  (when (and (derived-mode-p 'emacs-lisp-mode)
-             (or zenburn-add-font-lock-keywords
-                 (equal (file-name-nondirectory (buffer-file-name))
-                        "zenburn-theme.el")))
-    (unless zenburn-colors-font-lock-keywords
-      (setq zenburn-colors-font-lock-keywords
-            `((,(regexp-opt (mapcar 'car zenburn-colors-alist) 'words)
-               (0 (rainbow-colorize-by-assoc zenburn-colors-alist))))))
-    (font-lock-add-keywords nil zenburn-colors-font-lock-keywords)))
-
-(defadvice rainbow-turn-off (after zenburn activate)
-  "Also remove font-lock keywords for zenburn colors."
-  (font-lock-remove-keywords nil zenburn-colors-font-lock-keywords))
+;; (defadvice rainbow-turn-off (after zenburn activate)
+;;   "Also remove font-lock keywords for zenburn colors."
+;;   (font-lock-remove-keywords nil zenburn-colors-font-lock-keywords))
 
 ;;; Footer
 
@@ -805,9 +824,13 @@ This requires library `rainbow-mode'.")
 
 (provide-theme 'zenburn)
 
+;;;###autoload
+(add-to-list 'safe-local-eval-forms
+             '(when (require 'rainbow-mode nil t) (rainbow-mode 1)))
+
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
-;; eval: (zenburn-turn-on-rainbow-mode)
+;; eval: (when (require 'rainbow-mode nil t) (rainbow-mode 1))
 ;; End:
 ;;; zenburn-theme.el ends here
