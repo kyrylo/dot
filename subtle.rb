@@ -106,9 +106,9 @@ gravity :bottom_right,   [  50,  50,  50,  50 ]
 gravity :bottom_right66, [  50,  34,  50,  66 ]
 gravity :bottom_right33, [  50,  67,  50,  33 ]
 
-gravity :gimp_image,     [  10,   0,  80, 100 ]
+gravity :gimp_image,     [  10,   0,  75, 100 ]
 gravity :gimp_toolbox,   [   0,   0,  10, 100 ]
-gravity :gimp_dock,      [  90,   0,  10, 100 ]
+gravity :gimp_dock,      [  85,   0,  15, 100 ]
 
 # Custom
 gravity :center_colon, [ 17, 0, 66, 100 ]
