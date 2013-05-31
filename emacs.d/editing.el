@@ -7,3 +7,5 @@
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.abbrev_defs")
 (setq save-abbrevs t)
+
+(global-set-key (kbd "C-=") 'er/expand-region)
