@@ -9,3 +9,6 @@
 (setq save-abbrevs t)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(setq whitespace-style '(face trailing))
+(global-whitespace-mode t)
