@@ -16,3 +16,4 @@
 (load-file (config-file "backup.el"))
 (load-file (config-file "elpa.el"))
 (load-file (config-file "lang.el"))
+(load-file (config-file "navigation.el"))
