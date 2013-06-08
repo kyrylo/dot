@@ -17,3 +17,4 @@
 (load-file (config-file "elpa.el"))
 (load-file (config-file "lang.el"))
 (load-file (config-file "navigation.el"))
+(load-file (config-file "maps.el"))

@@ -11,8 +11,8 @@
                (add-to-list 'custom-theme-load-path filename)))))))
 
 (add-themes-to-load-path (config-dir "themes"))
-(load-theme 'monochrome t)
+(load-theme 'zenburn t)
 
-(set-default-font "Dejavu Sans Mono 8")
+(set-default-font "Envy Code R 9")
 (global-linum-mode t)
 (show-paren-mode t)
