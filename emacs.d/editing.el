@@ -3,6 +3,7 @@
 (cua-selection-mode t)
 
 (add-hook 'after-change-major-mode-hook 'fci-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.abbrev_defs")
