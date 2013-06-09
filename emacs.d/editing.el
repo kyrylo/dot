@@ -13,3 +13,5 @@
 
 (setq whitespace-style '(face trailing))
 (global-whitespace-mode t)
+
+(smartparens-global-mode t)
