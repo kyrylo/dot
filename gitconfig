@@ -9,7 +9,7 @@
 [color]
 	ui = true
 [color "diff"]
-	meta = 244 bold
+	meta = 4 bold
 	frag = 61
 	old = 241 bold
 	new = 37 bold
