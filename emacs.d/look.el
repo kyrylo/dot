@@ -7,12 +7,12 @@
     (dolist (elem (directory-files dir))
       (unless (or (equal "." elem) (equal ".." elem))
         (let ((filename (concat dir elem)))
-	  (if (file-directory-p filename)
-	      (add-to-list 'custom-theme-load-path filename)))))))
+          (if (file-directory-p filename)
+            (add-to-list 'custom-theme-load-path filename)))))))
 
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'kyrylo-zenburn t)
 
-(set-default-font "Monaco 7")
+;(set-default-font "Monaco 8")
 (global-linum-mode t)
 (show-paren-mode t)
