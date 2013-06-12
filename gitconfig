@@ -6,6 +6,7 @@
 	email = kyrylosilin@gmail.com
 [github]
 	user = kyrylo
+	oauth-token = 85b00a102d5edc665f14401125faa7434d93917c
 [color]
 	ui = true
 [color "diff"]
