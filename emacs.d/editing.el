@@ -17,4 +17,5 @@
 (smartparens-global-mode t)
 
 (require 'auto-complete-config)
-(setq-default auto-complete-mode t)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(ac-config-default)
