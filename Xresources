@@ -75,5 +75,5 @@ URxvt.cursorColor : #ffaf00
 URxvt.colorBD     : #afafdf
 URxvt.colorUL     : #dfdfaf
 
-Emacs.font: Monaco:size=10:antialias=true
+Emacs.font: GohuFont:size=10:antialias=false
 Emacs.fontBackend: xft
