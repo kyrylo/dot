@@ -15,3 +15,6 @@
 (global-whitespace-mode t)
 
 (smartparens-global-mode t)
+
+(require 'auto-complete-config)
+(setq-default auto-complete-mode t)
