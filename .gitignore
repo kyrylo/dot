@@ -4,3 +4,4 @@ emacs.d/elpa/archives/**/*
 emacs.d/ac-comphist.dat
 *.eld
 emacs.d/var/**/*
+emacs.d/url/*

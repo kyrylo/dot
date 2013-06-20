@@ -18,3 +18,5 @@
 (load-file (config-file "lang.el"))
 (load-file (config-file "navigation.el"))
 (load-file (config-file "maps.el"))
+(load-file (config-file "rss.el"))
+(load-file (config-file "browsing.el"))
