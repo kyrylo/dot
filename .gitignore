@@ -3,4 +3,4 @@ vim/.netrwhist
 emacs.d/elpa/archives/**/*
 emacs.d/ac-comphist.dat
 *.eld
-emacs.d/**/*
+emacs.d/var/**/*
