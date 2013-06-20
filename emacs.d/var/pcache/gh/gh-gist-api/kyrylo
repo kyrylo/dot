@@ -3,5 +3,5 @@
 (gh-cache "gh/gh-gist-api/kyrylo"
   :file "kyrylo"
   :entries #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ())
-  :timestamp 1371034608.216834
+  :timestamp 1371594158.3391533
   )
