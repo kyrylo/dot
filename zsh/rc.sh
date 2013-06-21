@@ -1,7 +1,7 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
-export EDITOR=vim
+export EDITOR="emacsclient -c --no-wait"
 export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
