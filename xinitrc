@@ -5,6 +5,7 @@
 parcellite &
 stardict &
 redshift -l 50:36.15 -t 5700:3600 -m randr &
+emacs --daemon &
 
 # Key repeat <rate> and <delay>.
 xset r rate 300 50
