@@ -16,4 +16,5 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 (ac-config-default)
 
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)
