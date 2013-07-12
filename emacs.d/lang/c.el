@@ -7,3 +7,6 @@
 
 (define-key c-mode-base-map (kbd "<backspace>") 'c-hungry-delete-backwards)
 (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+
+(add-hook 'c-mode-hook (lambda ()
+                         (semantic-mode 1)))

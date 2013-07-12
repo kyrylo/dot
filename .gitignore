@@ -6,3 +6,4 @@ emacs.d/ac-comphist.dat
 emacs.d/var/**/*
 emacs.d/url/*
 #*
+emacs.d/semanticdb
