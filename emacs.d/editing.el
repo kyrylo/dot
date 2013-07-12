@@ -10,7 +10,8 @@
 (setq whitespace-style '(face trailing))
 (global-whitespace-mode t)
 
-(smartparens-global-mode t)
+(require 'autopair)
+(autopair-global-mode)
 
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
