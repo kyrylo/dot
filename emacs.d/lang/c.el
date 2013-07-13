@@ -8,5 +8,6 @@
 (define-key c-mode-base-map (kbd "<backspace>") 'c-hungry-delete-backwards)
 (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 
-(add-hook 'c-mode-hook (lambda ()
-                         (semantic-mode 1)))
+(add-hook 'c-mode-hook 'semantic-mode)
+(define-key c-mode-base-map (kbd "M-[") 'semantic-ia-show-doc)
+(define-key c-mode-base-map (kbd "M-]") 'semantic-ia-show-summary)
