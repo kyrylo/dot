@@ -2,7 +2,6 @@ sudo
 git
 chromium
 firefox
-opera
 tmux
 gvim
 subtle-hg
@@ -31,3 +30,4 @@ elinks
 redshift
 emacs
 termsyn
+ncdu
