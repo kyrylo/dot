@@ -3,7 +3,7 @@ git
 chromium
 firefox
 tmux
-vim
+gvim
 subtle-hg
 rxvt-unicode
 aura
