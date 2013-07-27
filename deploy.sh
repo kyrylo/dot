@@ -2,7 +2,7 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
-echo -n 'Deploying your assets... '
+echo 'Deploying your assets...'
 mkdir -p ~/.dot_backup
 
 backup_file()
