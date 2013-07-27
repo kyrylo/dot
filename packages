@@ -24,7 +24,7 @@ gimp
 inkscape
 transmission-gtk
 parcellite
-stardict
+stardict-lite
 zsh
 elinks
 redshift
@@ -35,3 +35,5 @@ e-wrapper-git
 tree
 hddtemp
 scrot
+htop
+zsh-completion-subtle
