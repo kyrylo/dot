@@ -31,7 +31,7 @@ end
 style :all do
   font       "xft:Russo One-8:antialias=true:hinting=true:hintstyle=hintmedium"
   padding     0, 4, 0, 4
-  foreground  '#9fafaf'
+  foreground  '#dca3a3'
   background  '#000000'
 end
 
@@ -47,7 +47,8 @@ style :views do
   end
 
   style :occupied do
-    foreground  '#f7e7de'
+    foreground '#c47858'
+    background '#210C03'
   end
 
   style :urgent do
@@ -64,8 +65,6 @@ end
 
 style :subtle do
   panel       '#000000'
-  #background  '#000000'
-  border      '#ffffff', 50
 end
 
 # + Gravities
@@ -125,6 +124,9 @@ grab "W-4",  :ViewSwitch4
 grab "W-5",  :ViewSwitch5
 grab "W-F1", :ViewSwitch6
 grab "W-F2", :ViewSwitch7
+grab "W-F3", :ViewSwitch8
+grab "W-F4", :ViewSwitch9
+grab "W-F5", :ViewSwitch10
 
 grab "W-C-r",   :SubtleReload
 grab "W-C-S-r", :SubtleRestart
@@ -137,7 +139,7 @@ grab "W-v",     :WindowStick
 grab "W-equal", :WindowZaphod
 grab "W-r",     :WindowRaise
 grab "W-l",     :WindowLower
-grab "W-Left",  :WindowLeft
+#grab "W-Left",  :WindowLeft
 grab "W-Right", :WindowRight
 grab "W-S-k",   :WindowKill
 
@@ -152,8 +154,9 @@ grab "W-x", [ :bottom,       :bottom66,       :bottom33       ]
 grab "W-c", [ :bottom_right, :bottom_right66, :bottom_right33 ]
 
 grab "W-Return",    "urxvt"
-grab "W-Shift_R",   "chromium"
-grab "W-Page_Down", "stardict&"
+grab "W-Shift_R",   "luakit"
+grab "W-Control_R", "urxvt -name weechat -e weechat-curses &"
+grab "W-Left",      "urxvt -name ncmpcpp -e ncmpcpp &"
 
 grab "A-Tab" do
   clients = Subtlext::Client.visible
@@ -183,8 +186,7 @@ tag "terms", "xterm|[u]?rxvt" do
 end
 
 tag "browser" do
-  browsers = "navigator|chrom[e|ium]|opera"
-  match browsers
+  match "navigator|chrom[e|ium]|opera|luakit"
   borderless true
 end
 
@@ -246,18 +248,33 @@ tag "paint_pdf" do
   gravity :center
 end
 
-tag "dev_ray" do
-  match "ray"
+tag "music" do
+  match 'ncmpcpp'
   gravity :center
 end
 
-tag "vrt" do
+tag 'film' do
+  match 'mplayer'
+  gravity :center
+end
+
+tag 'pdf_img' do
+  match 'feh|zathura'
+  gravity :center
+end
+
+tag "vm" do
   match "Qt-subapplication"
   gravity :center
 end
 
+tag 'irc' do
+  match 'weechat'
+  gravity :center
+end
+
 tag "flash" do
-  match "<unknown>|plugin-container|exe|operapluginwrapper|npviewer.bin" 
+  match "<unknown>|plugin-container|exe|operapluginwrapper|npviewer.bin"
   stick true
 end
 
@@ -293,11 +310,36 @@ view 'default' do
   icon_only true
 end
 
-sublet :mpd do
-  show_icons false
+view 'im' do
+  match 'irc'
+  icon xbm('man')
+  icon_only true
 end
 
-sublet :clock do
-  interval 1
-  format_string "%H:%M %a %d"
+view 'vm' do
+  match 'vm'
+  icon xbm('box')
+  icon_only true
+end
+
+view 'pdf_img' do
+  match 'pdf_img'
+  icon xbm('binder')
+  icon_only true
+end
+
+view 'music' do
+  match 'music'
+  icon xbm('cd')
+  icon_only true
+end
+
+view 'film' do
+  match 'film'
+  icon xbm('movie')
+  icon_only true
+end
+
+sublet :mpd do
+  show_icons false
 end
