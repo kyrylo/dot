@@ -26,4 +26,4 @@
 [color "grep"]
 	match = 166 bold
 [core]
-	editor = vim -f
+	editor = emacsclient -t
