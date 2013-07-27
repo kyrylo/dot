@@ -2,7 +2,7 @@
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
 # Highlighting (solarized-like).
-. /usr/share/zsh/plugins/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 

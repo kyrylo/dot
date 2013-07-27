@@ -2,7 +2,7 @@
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
 export EDITOR="emacsclient -c --no-wait"
-export BROWSER=chromium
+export BROWSER=luakit
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
 export SAVEHIST=25000
@@ -130,4 +130,4 @@ autoload -Uz manydots-magic
 manydots-magic
 
 . /usr/share/chruby/chruby.sh
-chruby 1.9.3
+chruby 2.0.0
