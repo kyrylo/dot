@@ -61,5 +61,6 @@ backup_dir zsh/     ~/.zsh
 backup_dir vim      ~/.vim
 backup_dir fonts    ~/.fonts
 backup_dir emacs.d  ~/.emacs.d
+backup_dir icons    ~/.config/subtle/icons
 
 echo 'Done!'
