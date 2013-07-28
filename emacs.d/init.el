@@ -20,3 +20,4 @@
 (load-file (config-file "maps.el"))
 (load-file (config-file "rss.el"))
 (load-file (config-file "browsing.el"))
+(load-file (config-file "mail.el"))
