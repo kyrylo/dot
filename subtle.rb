@@ -200,6 +200,11 @@ tag "dev_emacs" do
   gravity :center
 end
 
+tag "dev_popup" do
+  match "pinentry"
+  gravity :center
+end
+
 tag "fixed" do
   geometry [ 10, 10, 100, 100 ]
   stick    true
