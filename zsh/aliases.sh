@@ -5,7 +5,6 @@ alias ..='cd ..'
 alias ls="ls -F --color"
 alias l="ls -lAh"
 alias ll="ls -l"
-alias la='ls -A'
 alias gd='git diff'
 alias gc='git commit'
 alias gco='git checkout'
