@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+#
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Print a colourful full width dash.
+function dash()
+{
+    local s=$(printf "\033[32m%-*s" `tput cols` "-")
+    echo "${s// /-}"
+}
+
+dash
