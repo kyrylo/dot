@@ -248,11 +248,6 @@ tag "paint_gimp_dock" do
   gravity :gimp_dock
 end
 
-tag "paint_pdf" do
-  match "evince|zathura"
-  gravity :center
-end
-
 tag "music" do
   match 'ncmpcpp'
   gravity :center
