@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+#
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Quickly starts a web server where the root directory is the current directory.
+require 'webrick'
+include WEBrick
+
+dir  = Dir.pwd
+port = 12000 + (dir.hash % 1000)
+
+printf("→ http://%s:%s\n", Socket.gethostname, port)
+server = HTTPServer.new(:Port => port, :DocumentRoot => dir)
+
+trap('INT') { server.shutdown }
+server.start
