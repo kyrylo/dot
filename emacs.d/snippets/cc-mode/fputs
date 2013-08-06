@@ -1,4 +1,3 @@
 #name : fputs("...", FILE *)
 # --
 fputs("${1:string}", ${2:stderr});
-$0
