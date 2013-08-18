@@ -73,3 +73,6 @@
 [submodule "emacs.d/themes/monochrome"]
 	path = emacs.d/themes/monochrome
 	url = git://github.com/fxn/monochrome-theme.el.git
+[submodule "vim/bundle/ragel"]
+	path = vim/bundle/ragel
+	url = git@github.com:arsenerei/vim-ragel.git
