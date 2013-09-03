@@ -4,4 +4,5 @@
   (ruby-end-mode 1)
   (ruby-tools-mode 1))
 
-(add-hook 'ruby-mode-hook 'ruby-init)
+(eval-after-load "ruby-mode"
+    '(define-key ruby-mode-map (kbd "C-c C-c") 'xmp))
