@@ -5,11 +5,16 @@
 #                                              <-- kyrylosilin@gmail.com
 #
 # Uninstalls all installed gems.
-# http://nphusion.com/2009/01/14/remove-all-ruby-gems/
-gems=$(gem list | cut -d" " -f1)
-
-if [[ -n "$gems" ]]; then
-  echo $gems | xargs gem uninstall -aIx
+#   * http://nphusion.com/2009/01/14/remove-all-ruby-gems/
+#   * http://stackoverflow.com/a/15133988
+if [ "$RUBY_VERSION" == "2.0.0" ]; then
+    for i in `gem list --no-versions`; do gem uninstall -aIx $i; done
 else
-  echo 'dot: no gems installed'
+    gems=$(gem list | cut -d" " -f1)
+
+    if [[ -n "$gems" ]]; then
+	echo $gems | xargs gem uninstall -aIx
+    else
+	echo 'dot: no gems installed'
+    fi
 fi
