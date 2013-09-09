@@ -1,7 +1,7 @@
 (setq
    backup-by-copying t
-   backup-directory-alist
-    '(("." . "~/.emacsaves"))
+   backup-directory-alist `((".*" . "~/.emacsaves"))
+   auto-save-file-name-transforms `((".*", "~/.emacsaves"))
    delete-old-versions t
    kept-new-versions 6
    kept-old-versions 2
