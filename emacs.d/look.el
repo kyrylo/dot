@@ -11,7 +11,7 @@
             (add-to-list 'custom-theme-load-path filename)))))))
 
 (add-themes-to-load-path (config-dir "themes"))
-(load-theme 'solarized-dark t)
+(load-theme 'kyrylo-zenburn t)
 
 ;(set-default-font "Monaco 8")
 (global-linum-mode t)
