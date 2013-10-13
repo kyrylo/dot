@@ -16,3 +16,5 @@ alias gaa='git add . &&
            git status &&
            echo "\e[033;32mAdded all unchecked files.\e[033;0m"'
 alias ee='emacsclient -t'
+alias cp='cp -v'
+alias mv='mv -v'
