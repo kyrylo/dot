@@ -1,6 +1,9 @@
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
+"mpc toggle"
+XF86MonBrightnessUp
+
 "amixer set Master 2- unmute"
 XF86AudioLowerVolume
 
