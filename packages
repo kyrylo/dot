@@ -38,3 +38,5 @@ scrot
 htop
 zsh-completion-subtle
 zsh-completions
+xbindkeys
+dmenu2
