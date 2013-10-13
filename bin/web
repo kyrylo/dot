@@ -1,0 +1,273 @@
+#!/usr/bin/env ruby
+######################################################################################
+# "web" by Chris Gahan (chris@ill-logic.com)
+######################################################################################
+# This script intelligently opens URLs in the best browser on the current desktop,
+# or on another desktop.
+#
+# Now you can have as many browsers open on as many desktops as you want, and you'll
+# never have to worry when clicking on a link that it'll go to the wrong one.
+######################################################################################
+
+######################################################################################
+# ROUTING RULES
+######################################################################################
+# 
+# The behaviour of this script can be easily customized by editing the "routes" below.
+#
+# Each match is tried in order, and the first matching one will be executed.
+# You can do whatever you like in the match's block.
+#
+# (Calling "open_in_best_browser(url, BROWSERS)"" is the default behaviour.)
+#
+# Match rule examples:
+#   match "site.com"
+#   match /site\.com/
+#   match host: /(site1|site2)\.com/
+#   match host: %w[site1.com site2.com], scheme: "https"
+#   match "site1.com", "site2.com", "site3.com"
+#   match host: "site.com"
+#   match ->(|uri|) { uri.host["site.com"] and Time.now.year == 2012 }
+#
+# The 'uri' object:
+#   Each rule matches against Ruby's URI object, and when a match succeds, the block
+#   is passed the URI object.
+#
+#   For example, if your url is "https://site.com/path?query=yes", the URI object's
+#   attributes are:
+#     scheme = "https",
+#     host   = "site.com",
+#     port   = 443,
+#     path   = "/path",
+#     query  = "query=yes"
+######################################################################################
+
+# A list of browsers, which will be tried in order.
+BROWSERS         = %w[opera chrome chromium midori firefox jumanji]
+VIDEO_BROWSERS   = %w[chrome chromium firefox]
+
+routes do
+
+  default do |uri|
+    open_in_best_browser uri, BROWSERS
+  end
+
+  match host: %w[youtube.com youtu.be] do |uri|
+    puts "* Playing #{uri.inspect} in mplayer..."
+    system("play", uri)
+  end
+
+  match host: %w[youtube.com youtu.be liveleak.com justin.tv vimeo.com infoq.com] do |uri|
+    # Load video sites in browsers that are good at playing videos.
+    open_in_best_browser uri, VIDEO_BROWSERS
+  end
+
+end
+
+######################################################################################
+# Here's the actual program. (This gets executed before the "routes" command above.)
+
+BEGIN {
+
+  require 'epitools/sys'
+  require 'epitools/wm'
+  require 'epitools/path'
+  require 'epitools/rash'
+
+  ####################################################################################
+
+  module URI
+    # URIs are strings, goddamnit!
+    def to_str
+      to_s
+    end
+  end
+  
+  ####################################################################################
+  # Router DSL lets you do arbitrary things for certain websites.
+
+  class Router
+    attr_accessor :url
+
+    #
+    # Magically load rules from DATA (everything in __END__)
+    #
+    def initialize(&block)
+      @matchers = []
+      @default  = nil
+
+      instance_eval &block
+    end
+
+    def match(*args, &block)
+      @matchers << [args, block]
+    end
+
+    def default(&block)
+      @default = block
+    end
+
+    def route!(url)
+      # Make sure the default is set...
+      @default ||= proc.new { open_in_best_browser url }
+
+      uri = URI.parse url
+
+      # Try each of the matchers...
+      @matchers.each do |args, block|
+
+        matched = args.any? do |arg|
+          case arg
+
+          when Hash
+            arg.all? do |key, val|
+              case val
+              when Array
+                val.any? { |v| uri.send(key)[v] }
+              when String, Regexp
+                uri.send(key)[val]
+              else
+                raise "Unknown match value: #{val.inspect}"
+              end
+            end
+
+          when Regexp, String
+            uri.to_s[arg]
+
+          when Proc
+            arg.call(uri)
+
+          else
+            raise "Unknown match thing: #{arg.inspect}"
+          end
+
+        end
+
+        return block.call(uri) if matched
+
+      end
+
+      # Otherwise, do the default action.
+      @default.call(url)
+    end
+
+  end
+
+  def routes(&block)
+    $router = Router.new(&block)
+  end
+
+  ######################################################################################
+
+  def select_parents(query, &block)
+    process = Sys.ps($$).first.parent
+
+    parents = []
+    while process
+      parents << process
+      process = process.parent
+    end
+
+    block ||= proc { |process| process.command[query] }
+
+    parents.select &block
+  end
+
+  def opened_by?(program)
+    find_in_parents(program)
+  end
+
+  def find_browsers(windows, browsers)
+    browsers.map do |browser_name|
+      browser_window = windows.select do |w|
+        next if w.command.nil?
+        bin = w.command.split.first
+        bin[browser_name]
+      end.first
+      [ browser_name, browser_window ] if browser_window
+    end.compact
+  end
+
+  def best_browser_for(url, browsers)
+    # Group by browsers
+    browsers_on_current_desktop = find_browsers(WM.current_desktop.windows, browsers)
+
+    if browsers_on_current_desktop.any?
+      browser_name, win = browsers_on_current_desktop.first
+      # p [:activating_browser_on_current_desktop, win]
+    elsif 
+      browsers_on_all_desktops = find_browsers(WM.windows, browsers)
+      if browsers_on_all_desktops.any?
+        browser_name, win  = browsers_on_all_desktops.first
+        # p [:activating_browser_on_other_desktop, win]
+      end
+    end
+
+    [browser_name, win]
+  end
+
+  def to_clipboard(string)
+    IO.popen("xclip -selection clipboard", "w") { |clip| clip << string }
+  end
+
+  def open_in_best_browser(url, browsers)
+    name, browser = best_browser_for(url, browsers)
+
+    puts "* Opening #{url.inspect} in #{name} on #{browser.desktop.name}"
+
+    to_clipboard(url)
+
+    browser.send_keys("<Ctrl-T><Ctrl-L><Ctrl-V>")
+    sleep 0.2
+    browser.send_keys("<Ctrl-L><Return>")
+    
+    browser.activate!
+  end
+
+  #
+  # If the required binaries aren't in the path, tell the user, then terminate.
+  #
+  def ensure_required_binaries_are_in_the_path
+    missing = false
+
+    {"wmctrl"=>"wmctrl", "xse" => "xsendevent", "xclip" => "xclip"}.each do |bin, package|
+      unless Path.which(bin)
+        puts "* '#{bin}' not found in path; please install the '#{package}' package."
+        missing = true
+      end
+    end
+
+    exit 1 if missing
+  end
+
+} 
+
+
+if $0 == __FILE__
+  if ARGV.any? { |arg| arg == "--help" }
+    puts "== Usage: =="
+    puts " web <url>"
+    puts
+    puts "== What it Does: =="
+    puts " Opens the url in the best browser on the current desktop."
+    puts " If there's no browser on the current desktop, it finds the"
+    puts " best browser on the nearest desktop and jumps to that one."
+    puts
+    puts "== These are the browsers it will try to use (in order): =="
+    puts " #{BROWSERS.join(", ")}"
+    puts
+
+    exit
+  end
+
+  ensure_required_binaries_are_in_the_path
+
+  if url = ARGV.first
+    url = "http://#{url}" unless url[%r{^https?://}i] # slap an http:// on the argument if necessary
+
+    # The $router variable is assigned when "router()" is called.
+    $router.route! url
+  else
+    puts "usage: web <url>"
+  end
+end
