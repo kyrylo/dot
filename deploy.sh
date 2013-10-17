@@ -32,6 +32,7 @@ mkdir -p ~/.ncmpcpp/
 mkdir -p ~/.elinks/
 mkdir -p ~/.teamocil/
 mkdir -p ~/.weechat/{perl,python}/autoload
+mkdir -p ~/.weechat/
 
 backup_file ackrc            ~/.ackrc
 backup_file gemrc            ~/.gemrc
@@ -50,6 +51,7 @@ backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
 backup_file jshintrc         ~/.jshintrc
 backup_file gdbinit          ~/.gdbinit
+backup_file mplayer.conf     ~/.mplayer/conf
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf
