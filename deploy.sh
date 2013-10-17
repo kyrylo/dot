@@ -51,7 +51,7 @@ backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
 backup_file jshintrc         ~/.jshintrc
 backup_file gdbinit          ~/.gdbinit
-backup_file mplayer.conf     ~/.mplayer/conf
+backup_file mplayer.conf     ~/.mplayer/config
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf
