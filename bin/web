@@ -44,7 +44,7 @@
 
 # A list of browsers, which will be tried in order.
 BROWSERS         = %w[opera chrome chromium midori firefox jumanji]
-VIDEO_BROWSERS   = %w[chrome chromium firefox]
+VIDEO_BROWSERS   = %w[chrome chromium firefox opera]
 
 routes do
 
@@ -52,13 +52,18 @@ routes do
     open_in_best_browser uri, BROWSERS
   end
 
-  match host: %w[youtube.com youtu.be] do |uri|
-    puts "* Playing #{uri.inspect} in mplayer..."
+  # Remove click trackers
+  match(host: /google.\w{2,3}$/, path: "/url")   { |uri| route uri.params["url"] || uri.params["q"] }
+  match(host: /facebook\.com$/,  path: "/l.php") { |uri| route uri.params["u"] }
+
+  # Open videos in mplayer
+  match host: %w[youtube.com youtu.be wimp.com vimeo.com] do |uri|
+    puts "* Playing #{uri} in mplayer..."
     system("play", uri)
   end
 
-  match host: %w[youtube.com youtu.be liveleak.com justin.tv vimeo.com infoq.com] do |uri|
-    # Load video sites in browsers that are good at playing videos.
+  # Oter videos open in browsers that are good at playing videos
+  match host: %w[liveleak.com justin.tv infoq.com] do |uri|
     open_in_best_browser uri, VIDEO_BROWSERS
   end
 
@@ -71,24 +76,28 @@ BEGIN {
 
   require 'epitools/sys'
   require 'epitools/wm'
-  require 'epitools/path'
-  require 'epitools/rash'
+  require 'epitools/core_ext/misc'
+  require 'epitools/core_ext/hash'
 
   ####################################################################################
 
   module URI
-    # URIs are strings, goddamnit!
-    def to_str
-      to_s
+
+    #
+    # No blank values!
+    #
+    alias_method :old_params, :params
+    
+    def params
+      old_params.delete_if { |k,v| v.blank? }
     end
+
   end
-  
+
   ####################################################################################
   # Router DSL lets you do arbitrary things for certain websites.
 
   class Router
-    attr_accessor :url
-
     #
     # Magically load rules from DATA (everything in __END__)
     #
@@ -108,10 +117,10 @@ BEGIN {
     end
 
     def route!(url)
-      # Make sure the default is set...
-      @default ||= proc.new { open_in_best_browser url }
+      uri = URI.parse(url)
 
-      uri = URI.parse url
+      # Make sure the default is set...
+      @default ||= proc.new { open_in_best_browser uri }
 
       # Try each of the matchers...
       @matchers.each do |args, block|
@@ -148,7 +157,7 @@ BEGIN {
       end
 
       # Otherwise, do the default action.
-      @default.call(url)
+      @default.call(uri)
     end
 
   end
@@ -188,7 +197,7 @@ BEGIN {
     end.compact
   end
 
-  def best_browser_for(url, browsers)
+  def best_browser_for(uri, browsers)
     # Group by browsers
     browsers_on_current_desktop = find_browsers(WM.current_desktop.windows, browsers)
 
@@ -210,18 +219,30 @@ BEGIN {
     IO.popen("xclip -selection clipboard", "w") { |clip| clip << string }
   end
 
-  def open_in_best_browser(url, browsers)
-    name, browser = best_browser_for(url, browsers)
+  def open_in_best_browser(uri, browsers)
+    name, browser = best_browser_for(uri, browsers)
 
-    puts "* Opening #{url.inspect} in #{name} on #{browser.desktop.name}"
+    unless browser
+      puts "No suitable browser found on any desktop."
+      exit 1
+    end
 
-    to_clipboard(url)
+    puts "* Opening #{uri.inspect} in #{name} on #{browser.desktop.name}"
+
+    to_clipboard(uri)
 
     browser.send_keys("<Ctrl-T><Ctrl-L><Ctrl-V>")
     sleep 0.2
     browser.send_keys("<Ctrl-L><Return>")
     
     browser.activate!
+  end
+
+  def which(bin)
+    ENV["PATH"].split(":").each do |dir|
+      path = File.join(dir, bin)
+      return path if File.exists? path
+    end
   end
 
   #
@@ -231,13 +252,17 @@ BEGIN {
     missing = false
 
     {"wmctrl"=>"wmctrl", "xse" => "xsendevent", "xclip" => "xclip"}.each do |bin, package|
-      unless Path.which(bin)
+      unless which(bin)
         puts "* '#{bin}' not found in path; please install the '#{package}' package."
         missing = true
       end
     end
 
     exit 1 if missing
+  end
+
+  def route(url)
+    $router.route! url
   end
 
 } 
@@ -266,7 +291,7 @@ if $0 == __FILE__
     url = "http://#{url}" unless url[%r{^https?://}i] # slap an http:// on the argument if necessary
 
     # The $router variable is assigned when "router()" is called.
-    $router.route! url
+    route url
   else
     puts "usage: web <url>"
   end
