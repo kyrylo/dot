@@ -24,3 +24,4 @@ ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=9"
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]="fg=9"
 ZSH_HIGHLIGHT_STYLES[assign]="fg=green"
 ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=green'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=2'
