@@ -114,10 +114,6 @@ setopt HIST_IGNORE_ALL_DUPS
 # list.
 setopt HIST_REDUCE_BLANKS
 
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
-bindkey '^D' backward-delete-char
-
 # Vi editing mode.
 bindkey -v
 
