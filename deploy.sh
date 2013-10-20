@@ -52,6 +52,7 @@ backup_file subtle.rb        ~/.config/subtle/subtle.rb
 backup_file jshintrc         ~/.jshintrc
 backup_file gdbinit          ~/.gdbinit
 backup_file mplayer.conf     ~/.mplayer/config
+backup_file dircolors        ~/.dircolors
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf

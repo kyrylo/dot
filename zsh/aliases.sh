@@ -18,3 +18,4 @@ alias gaa='git add . &&
 alias ee='emacsclient -t'
 alias cp='cp -v'
 alias mv='mv -v'
+alias tmux="tmux -2"
