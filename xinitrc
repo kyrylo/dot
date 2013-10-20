@@ -6,6 +6,8 @@ parcellite &
 goldendict &
 dropboxd &
 mpd &
+sylpheed &
+gnucash &
 redshift -l 50:36.15 -t 5700:3600 -m randr &
 emacs --daemon &
 
