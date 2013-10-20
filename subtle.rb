@@ -127,6 +127,7 @@ grab "W-F2", :ViewSwitch7
 grab "W-F3", :ViewSwitch8
 grab "W-F4", :ViewSwitch9
 grab "W-F5", :ViewSwitch10
+grab "W-F6", :ViewSwitch11
 
 grab "W-C-r",   :SubtleReload
 grab "W-C-S-r", :SubtleRestart
@@ -280,6 +281,16 @@ tag "flash" do
   stick true
 end
 
+tag 'sylpheed' do
+  match 'main_window|addressbook|sylpheed'
+  gravity :center
+end
+
+tag 'gnucash' do
+  match 'gnucash'
+  gravity :center
+end
+
 # + Views
 
 view 'trm' do
@@ -318,14 +329,14 @@ view 'im' do
   icon_only true
 end
 
-view 'vm' do
-  match 'vm'
-  icon xbm('box')
+view 'mail' do
+  match 'sylpheed'
+  icon xbm('mail')
   icon_only true
 end
 
 view 'pdf_img' do
-  match 'pdf_img'
+  match 'pdf_img|gnucash'
   icon xbm('binder')
   icon_only true
 end
@@ -341,6 +352,13 @@ view 'film' do
   icon xbm('movie')
   icon_only true
 end
+
+view 'vm' do
+  match 'vm'
+  icon xbm('box')
+  icon_only true
+end
+
 
 sublet :mpd do
   show_icons false
