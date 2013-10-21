@@ -61,6 +61,7 @@ end
 style :clients do
   active   '#302f2e', 1
   inactive '#0f0f0f', 1
+  width 100
 end
 
 style :subtle do
