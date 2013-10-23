@@ -27,3 +27,5 @@
 	match = 166 bold
 [core]
 	editor = emacsclient -t
+[merge]
+	tool = meld
