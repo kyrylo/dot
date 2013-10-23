@@ -19,3 +19,5 @@
 (ac-config-default)
 
 (yas-global-mode 1)
+
+(setq require-final-newline t)
