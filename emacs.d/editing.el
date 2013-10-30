@@ -21,3 +21,4 @@
 (yas-global-mode 1)
 
 (setq require-final-newline t)
+(setq-default line-spacing 1)
