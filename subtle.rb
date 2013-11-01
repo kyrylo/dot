@@ -161,6 +161,7 @@ grab "W-Control_R", "urxvt -name weechat -e weechat-curses &"
 grab "W-Left",      "urxvt -name ncmpcpp -e ncmpcpp &"
 grab "W-o",         "web-clipboard"
 grab "W-u",         "dmenu_run -b -i -p 'Launch:' -fn 'Monospace-8'"
+grab "W-S-l",         "xlock"
 
 grab "A-Tab" do
   clients = Subtlext::Client.visible
