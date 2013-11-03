@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+#
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Calculates odds and wins (so-called "System" N-1/N, where N is the number of
+# events). Feed it the amount of hryvnias (integer) you want to put on a single
+# event and a bunch of space separated odds (float):
+#
+#   % ./bets 2 1.11 1.9 1.21 2.35 2.1
+#
+class Bet
+  def initialize(odds, money)
+    @odds = odds.map(&:to_f)
+    @money = money.to_i
+    @variants = []
+  end
+
+  def money_to_pay
+    @money * @variants.count
+  end
+
+  def win
+    calc_win
+  end
+
+  def calc_variants
+    @odds.each_with_index do |arg, idx|
+      temp_odds = @odds.dup
+      temp_odds.delete_at(idx)
+      @variants << optimise(temp_odds.inject(:*))
+    end
+  end
+
+  def allowed_failures
+    @variants.map.with_index do |variant, idx|
+      vars = [@variants.slice(0...idx), @variants.slice(idx+1..-1)].flatten
+      calc_win(vars)
+    end
+  end
+
+  private
+
+  def calc_win(variants = @variants)
+    amount = variants.inject(:+) * @money
+    optimise(amount.floor)
+  end
+
+  def optimise(n)
+    n.round(2)
+  end
+end
+
+
+bet = Bet.new(ARGV[1..-1], ARGV.first)
+bet.calc_variants
+
+puts "Pay: #{ bet.money_to_pay }"
+printf "Win: %0.2f\n", bet.win
+
+puts "---"
+
+bet.allowed_failures.each_with_index do |failure, idx|
+  printf "  Failure ##{ idx + 1 }: "
+  printf "%0.2f\n", failure
+end
