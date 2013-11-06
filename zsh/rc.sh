@@ -118,6 +118,9 @@ setopt HIST_IGNORE_ALL_DUPS
 # list.
 setopt HIST_REDUCE_BLANKS
 
+# Turns on interactive comments; comments begin with a #.
+setopt INTERACTIVECOMMENTS
+
 # Vi editing mode.
 bindkey -v
 
