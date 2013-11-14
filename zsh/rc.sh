@@ -46,7 +46,7 @@ setopt PUSHD_SILENT
 # Prevents aliases on the command line from being internally substituted before
 # completion is attempted. The effect is to make the alias a distinct command
 # for completion purposes.
-setopt COMPLETE_ALIASES
+# setopt COMPLETE_ALIASES
 
 # Don't kill background jobs on exit.
 setopt NO_HUP
