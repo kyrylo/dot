@@ -21,3 +21,4 @@
 (load-file (config-file "rss.el"))
 (load-file (config-file "browsing.el"))
 (load-file (config-file "misc.el"))
+(load-file (config-file "custom.el"))

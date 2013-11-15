@@ -16,5 +16,4 @@
             (flymake-jshint-load)
             (flymake-mode 1)
             (setq js2-basic-offset 2
-                  indent-tabs-mode nil
-                  js2-function-param "Red")))
+                  indent-tabs-mode nil)))
