@@ -22,3 +22,5 @@
 
 (setq require-final-newline t)
 (setq-default line-spacing 1)
+
+(global-auto-revert-mode t)
