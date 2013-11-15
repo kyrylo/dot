@@ -2,9 +2,9 @@
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
 alias ..='cd ..'
-alias ls="ls -F --color"
-alias l="ls -lAh"
-alias ll="ls -l"
+alias ls='ls -F --color'
+alias l='ls -lAh'
+alias ll='ls -l'
 alias gd='git diff'
 alias gc='git commit'
 alias gco='git checkout'
