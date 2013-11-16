@@ -17,5 +17,9 @@ proc {
 
 Pry::Commands.alias_command '@', 'whereami'
 
+Pry::Commands.block_command('enable-pry', 'Enable `binding.pry` feature') do
+  ENV['DISABLE_PRY'] = nil
+end
+
 # It's slightly bugged. Let's wait for the better times!
 # Pry.auto_resize!
