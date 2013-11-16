@@ -17,4 +17,5 @@ proc {
 
 Pry::Commands.alias_command '@', 'whereami'
 
-#Pry.auto_resize!
+# It's slightly bugged. Let's wait for the better times!
+# Pry.auto_resize!
