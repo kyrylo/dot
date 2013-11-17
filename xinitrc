@@ -3,7 +3,6 @@
 #                                              <-- kyrylosilin@gmail.com
 # Autostart programs.
 parcellite &
-goldendict &
 dropboxd &
 mpd &
 sylpheed &
@@ -30,7 +29,7 @@ xbindkeys
 setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:scroll,compose:ralt"
 
 # Use a wallpaper.
-feh --bg-center ~/Dropbox/pictures/wallpapers/wallpaper.jpg
+feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
 
 # Run systemd as user intsance.
 #systemd --user &
