@@ -9,3 +9,4 @@ xrandr --addmode HDMI1 2560x1440_30.00
 xrandr --output LVDS1 --off
 xrandr --output LVDS1 --primary --mode 1280x800 --right-of HDMI1 --output HDMI1 --mode 2560x1440_30.00
 subtler --restart
+feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
