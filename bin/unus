@@ -5,4 +5,4 @@
 #                                              <-- kyrylosilin@gmail.com
 #
 # Use laptop screen only.
-xrandr --output VGA1 --primary --auto
+xrandr --output LVDS1 --mode 1280x800 --primary --output HDMI1 --off
