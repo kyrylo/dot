@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# Convert an `.ogv` file to a `.gif` file. Usually the size of the resulting GIF
+# is way bigger.
+ffmpeg -i $1 -pix_fmt rgb24 -r $2 output.gif
