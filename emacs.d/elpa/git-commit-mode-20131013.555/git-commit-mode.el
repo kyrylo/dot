@@ -6,7 +6,7 @@
 ;; Authors: Sebastian Wiesner <lunaryorn@gmail.com>
 ;;	Florian Ragwitz <rafl@debian.org>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
-;; Version: 20131031.1351
+;; Version: 20131013.555
 ;; X-Original-Version: 0.14.0
 ;; Homepage: https://github.com/magit/git-modes
 ;; Keywords: convenience vc git
@@ -197,10 +197,6 @@ default comments in git commit messages"
     (define-key map (kbd "C-c M-s") 'git-commit-save-message)
     (define-key map (kbd "M-p")     'git-commit-prev-message)
     (define-key map (kbd "M-n")     'git-commit-next-message)
-    (define-key map [remap server-edit]         'git-commit-commit)
-    (define-key map [remap kill-buffer]         'git-commit-abort)
-    (define-key map [remap ido-kill-buffer]     'git-commit-abort)
-    (define-key map [remap ibuffer-kill-buffer] 'git-commit-abort)
     ;; Old bindings to avoid confusion
     (define-key map (kbd "C-c C-x s") 'git-commit-signoff)
     (define-key map (kbd "C-c C-x a") 'git-commit-ack)
@@ -279,8 +275,6 @@ Return t, if the commit was successful, or nil otherwise."
       (message "Commit canceled due to stylistic errors.")
     (save-buffer)
     (run-hooks 'git-commit-kill-buffer-hook)
-    (remove-hook 'kill-buffer-query-functions
-                 'git-commit-kill-buffer-noop t)
     (git-commit-restore-previous-winconf
       (if (git-commit-buffer-clients)
           (server-edit)
@@ -293,8 +287,6 @@ The commit message is saved to the kill ring."
   (interactive)
   (save-buffer)
   (run-hooks 'git-commit-kill-buffer-hook)
-  (remove-hook 'kill-buffer-hook 'server-kill-buffer t)
-  (remove-hook 'kill-buffer-query-functions 'git-commit-kill-buffer-noop t)
   (git-commit-restore-previous-winconf
     (let ((clients (git-commit-buffer-clients)))
       (if clients
@@ -602,27 +594,7 @@ basic structure of and errors in git commit messages."
   (when (string= "" (buffer-substring-no-properties
                      (line-beginning-position)
                      (line-end-position)))
-    (open-line 1))
-  ;; Make sure `git-commit-abort' cannot be by-passed
-  (add-hook 'kill-buffer-query-functions
-            'git-commit-kill-buffer-noop nil t)
-  ;; Make the wrong usage info from `server-execute' go way
-  (run-with-timer 0.01 nil (lambda (m) (message "%s" m))
-                  (substitute-command-keys
-                   (concat "Type \\[git-commit-commit] "
-                           (let ((n (buffer-file-name)))
-                             (cond ((equal n "TAG_EDITMSG") "to tag")
-                                   ((or (equal n "NOTES_EDITMSG")
-                                        (equal n "PULLREQ_EDITMSG"))
-                                    "when done")
-                                   (t "to commit")))
-                           " (\\[git-commit-abort] to abort)."))))
-
-(defun git-commit-kill-buffer-noop ()
-  (message
-   (substitute-command-keys
-    "Don't kill this buffer.  Instead abort using \\[git-commit-abort]."))
-  nil)
+    (open-line 1)))
 
 (defun git-commit-mode-flyspell-verify ()
   (not (nth 4 (syntax-ppss)))) ; not inside a comment
@@ -636,10 +608,6 @@ basic structure of and errors in git commit messages."
                    "/MERGE_MSG\\'" "/TAG_EDITMSG\\'"
                    "/PULLREQ_EDITMSG\\'"))
   (add-to-list 'auto-mode-alist (cons pattern 'git-commit-mode)))
-
-(defun git-commit-auto-mode-enable ()
-  (message "git-commit-auto-mode-enable is obsolete and doesn't do anything"))
-(make-obsolete 'git-commit-auto-mode-enable "This mode is a noop now" "")
 
 (provide 'git-commit-mode)
 ;; Local Variables:
