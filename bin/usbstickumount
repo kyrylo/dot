@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# A shortcut to umount usb sticks.
+sudo umount /mnt/usbstick
