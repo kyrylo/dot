@@ -7,3 +7,5 @@ emacs.d/var/**/*
 emacs.d/url/*
 #*
 emacs.d/semanticdb
+
+zsh/secret_stuff.sh
