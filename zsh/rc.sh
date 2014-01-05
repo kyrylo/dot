@@ -133,4 +133,4 @@ autoload -Uz manydots-magic
 manydots-magic
 
 . /usr/share/chruby/chruby.sh
-chruby 2.0.0
+chruby 2.1.0
