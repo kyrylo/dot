@@ -2,6 +2,7 @@
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
 Pry.color = true
+Pry.editor = 'emacsclient -t'
 
 Pry.config.theme = 'zenburn'
 Pry.config.coolline_matched_paren ||= "\e[38;5;160;48;5;245m"
