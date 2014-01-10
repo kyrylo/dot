@@ -33,6 +33,7 @@ mkdir -p ~/.elinks/
 mkdir -p ~/.teamocil/
 mkdir -p ~/.weechat/{perl,python}/autoload
 mkdir -p ~/.weechat/
+mkdir -p ~/.mpd/
 
 backup_file ackrc            ~/.ackrc
 backup_file gemrc            ~/.gemrc
@@ -53,6 +54,7 @@ backup_file jshintrc         ~/.jshintrc
 backup_file gdbinit          ~/.gdbinit
 backup_file mplayer.conf     ~/.mplayer/config
 backup_file dircolors        ~/.dircolors
+backup_file mpd.conf         ~/.mpd/mpd.conf
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf
