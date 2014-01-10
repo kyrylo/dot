@@ -1,3 +1,4 @@
+#!/bin/sh
 # Kyrylo Silin -->
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
@@ -13,7 +14,12 @@ xset r rate 300 50
 xset m 1 1
 
 # Minimal brightness.
-xbacklight -set 1
+if [ $HOSTNAME = "x220" ]
+then
+    xbacklight -set 70
+else
+    xbacklight -set 1
+fi
 
 # Bindings for multimedia keys.
 xbindkeys
@@ -25,5 +31,9 @@ setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:scroll,compose:ralt"
 feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
 
 # Launch a window manager.
-# exec subtle
-xmonad-autostart
+if [ $HOSTNAME = "x220" ]
+then
+    xmonad-autostart
+else
+    exec subtle
+fi
