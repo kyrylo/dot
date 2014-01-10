@@ -66,3 +66,4 @@ automake
 autoconf
 xmobar
 haskell-xmonad-contrib
+xdg-utils
