@@ -56,7 +56,7 @@
 	path = cfg/vim/bundle/autoclose
 	url = git://github.com/vim-scripts/AutoClose.git
 [submodule "git-aliae"]
-	path = git-aliae
+	path = cfg/submodules/git-aliae
 	url = git@github.com:ConradIrwin/git-aliae.git
 [submodule "vim/bundle/align"]
 	path = cfg/vim/bundle/align
