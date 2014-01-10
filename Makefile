@@ -12,3 +12,5 @@ install-packages:
 	yes | sudo xargs -a arch-packages/default.packages pacman -S
 	sh -c arch-packages/aura.build
 	yes | sudo xargs -a arch-packages/aur.packages aura -A
+cleanup:
+	rm -r tmp
