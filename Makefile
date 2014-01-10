@@ -14,3 +14,5 @@ install-packages:
 	yes | sudo xargs -a arch-packages/aur.packages aura -A
 cleanup:
 	rm -r tmp
+deploy-cfg:
+	cd cfg && ./cfg.build
