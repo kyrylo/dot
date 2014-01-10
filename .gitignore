@@ -10,3 +10,4 @@ emacs.d/semanticdb
 zsh/secret_stuff.sh
 emacs.d/elpa
 emacs.d/.cask
+tmp

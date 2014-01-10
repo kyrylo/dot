@@ -1,0 +1,5 @@
+yes | sudo xargs -a aura.packages pacman -S
+mkdir -p tmp/aura && cd tmp/aura
+wget https://aur.archlinux.org/packages/au/aura/PKGBUILD
+yes | makepkg -sf
+yes | sudo pacman -U aura*pkg.tar.xz

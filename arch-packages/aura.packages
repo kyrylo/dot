@@ -1,0 +1,10 @@
+ghc
+haskell-regex-base
+haskell-parsec
+haskell-syb
+haskell-transformers
+haskell-mtl
+haskell-json
+haskell-temporary
+haskell-curl
+haskell-regex-pcre

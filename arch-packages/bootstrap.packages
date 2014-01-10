@@ -1,0 +1,15 @@
+sudo
+haskell-xmonad
+xmobar
+haskell-xmonad-contrib
+xdg-utils
+alsa-utils
+mesa
+xorg-server
+xorg-server-utils
+xorg-xinit
+xf86-video-intel
+xf86-input-synaptics
+xterm
+wget
+ca-certificates
