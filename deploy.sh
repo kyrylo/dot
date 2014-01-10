@@ -13,7 +13,7 @@ backup_file()
     rm $2
   fi
 
-  ln -s $PWD/$1 $2
+  ln -sf $PWD/$1 $2
 }
 
 backup_dir()
@@ -23,7 +23,7 @@ backup_dir()
     rm -rf $2
   fi
 
-  ln -s $PWD/$1 $2
+  ln -sf $PWD/$1 $2
 }
 
 mkdir -p ~/.config/subtle/
