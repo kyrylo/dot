@@ -61,3 +61,6 @@ xlockmore
 antiword
 localepurge
 xmonad
+gdb
+automake
+autoconf
