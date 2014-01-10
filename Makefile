@@ -1,5 +1,5 @@
 update-emacs:
-	cd emacs.d && cask install
+	cd cfg/emacs.d && cask install
 	rm -f ~/.emacs.d/elpa
 	ln -s ~/.emacs.d/.cask/**/elpa ~/.emacs.d
 set-defaults:
