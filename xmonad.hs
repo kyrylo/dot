@@ -106,6 +106,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+
+    -- Use a single monitor
+    , ((modm .|. shiftMask, xK_F11   ), spawn ("unus"))
+
+    -- Use two monitors
+    , ((modm .|. shiftMask, xK_F12   ), spawn("duo"))
     ]
     ++
 
