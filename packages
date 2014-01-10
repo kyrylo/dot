@@ -60,9 +60,9 @@ meld
 xlockmore
 antiword
 localepurge
-xmonad
+haskell-xmonad
 gdb
 automake
 autoconf
 xmobar
-xmonad-contrib
+haskell-xmonad-contrib
