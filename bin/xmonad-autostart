@@ -1,0 +1,17 @@
+##!/usr/bin/env sh
+# Kyrylo Silin -->
+#                 https://github.com/kyrylo/dot
+#                                              <-- kyrylosilin@gmail.com
+#
+# A bunch of programs I want to see whenever I load XMonad. Also includes XMonad
+# specific commands.
+parcellite &
+dropboxd&
+mpd &
+sylpheed &
+gnucash &
+redshift -l 50:36.15 -t 5700:3600 -m randr &
+emacs --daemon &
+
+xsetroot -cursor_name left_ptr
+exec xmonad
