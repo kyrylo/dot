@@ -64,3 +64,5 @@ xmonad
 gdb
 automake
 autoconf
+xmobar
+xmonad-contrib
