@@ -30,10 +30,10 @@ mkdir -p ~/.config/subtle/
 mkdir -p ~/.bin/
 mkdir -p ~/.ncmpcpp/
 mkdir -p ~/.elinks/
-mkdir -p ~/.teamocil/
 mkdir -p ~/.weechat/{perl,python}/autoload
 mkdir -p ~/.weechat/
 mkdir -p ~/.mpd/
+mkdir -p ~/.xmonad/
 
 backup_file ackrc            ~/.ackrc
 backup_file gemrc            ~/.gemrc
@@ -48,13 +48,13 @@ backup_file Xresources       ~/.Xresources
 backup_file zshrc.sh         ~/.zshrc
 backup_file ncmpcpp.conf     ~/.ncmpcpp/config
 backup_file elinks.conf      ~/.elinks/elinks.conf
-backup_file teamocil.run.yml ~/.teamocil/run.yml
 backup_file subtle.rb        ~/.config/subtle/subtle.rb
 backup_file jshintrc         ~/.jshintrc
 backup_file gdbinit          ~/.gdbinit
 backup_file mplayer.conf     ~/.mplayer/config
 backup_file dircolors        ~/.dircolors
 backup_file mpd.conf         ~/.mpd/mpd.conf
+backup_file xmonad.hs         ~/.xmonad/xmonad.hs
 
 for conf in weechat/*.conf; do
   backup_file $conf ~/.$conf
