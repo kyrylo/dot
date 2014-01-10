@@ -67,9 +67,6 @@
 [submodule "vim/bundle/l9"]
 	path = cfg/vim/bundle/l9
 	url = https://github.com/vim-scripts/L9.git
-[submodule "emacs.d/themes/monochrome"]
-	path = emacs.d/themes/monochrome
-	url = git://github.com/fxn/monochrome-theme.el.git
 [submodule "vim/bundle/ragel"]
 	path = cfg/vim/bundle/ragel
 	url = git@github.com:arsenerei/vim-ragel.git
