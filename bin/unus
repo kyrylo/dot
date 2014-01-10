@@ -5,6 +5,11 @@
 #                                              <-- kyrylosilin@gmail.com
 #
 # Use laptop screen only.
-xrandr --output LVDS1 --mode 1280x800 --primary --output HDMI1 --off
-subtler --restart
-feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
+if [ $HOSTNAME = "x220" ]
+then
+    xrandr --output LVDS1 --mode 1366x768 --primary --output DP1 --off
+else
+    xrandr --output LVDS1 --mode 1280x800 --primary --output HDMI1 --off
+    subtler --restart
+    feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
+fi
