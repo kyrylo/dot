@@ -44,9 +44,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-    -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
-
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
@@ -267,7 +264,6 @@ help = unlines ["The default modifier key is 'Super'. Default keybindings:",
     "-- launching and killing programs",
     "mod-Shift-Enter  Launch xterminal",
     "mod-p            Launch dmenu",
-    "mod-Shift-p      Launch gmrun",
     "mod-Shift-c      Close/kill the focused window",
     "mod-Space        Rotate through the available layout algorithms",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
