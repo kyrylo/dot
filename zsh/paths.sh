@@ -14,5 +14,8 @@ export PATH="/usr/local/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Some k00 Git aliases.
-PATH="$HOME/.dot/git-aliae/bin:$PATH"
-PATH="$HOME/.dot/git-aliae/wip:$PATH"
+export PATH="$HOME/.dot/git-aliae/bin:$PATH"
+export PATH="$HOME/.dot/git-aliae/wip:$PATH"
+
+# Cask (http://cask.github.io)
+export PATH="$HOME/.cask/bin:$PATH"
