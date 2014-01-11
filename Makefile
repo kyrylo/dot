@@ -10,10 +10,12 @@ set-defaults:
 	xdg-mime default zathura.desktop application/pdf
 	xdg-mime default nautilus.desktop inode/directory
 install-packages:
-	yes | sudo xargs -a arch-packages/bootstrap.packages pacman -S
-	yes | sudo xargs -a arch-packages/default.packages pacman -S
-	sh -c arch-packages/aura.build
+	sudo pacman -Sy
+	yes | sudo xargs -a arch-packages/bootstrap.packages pacman -S --needed
+	yes | sudo xargs -a arch-packages/default.packages pacman -S --needed
+	./arch-packages/aura.build
 	yes | sudo xargs -a arch-packages/aur.packages aura -A
+	sudo xargs -a arch-packages/nodejs.packages npm -g install
 cleanup:
 	rm -r tmp
 deploy-cfg:
