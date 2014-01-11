@@ -1,4 +1,5 @@
 (defun haskell-init ()
+  (indent-tabs-mode nil)
   (haskell-indentation-mode -1)
   (haskell-indent-mode -1))
 
