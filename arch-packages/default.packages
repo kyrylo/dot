@@ -33,6 +33,8 @@ tree
 hddtemp
 scrot
 htop
+powertop
+iotop
 zsh-completions
 xbindkeys
 ack
