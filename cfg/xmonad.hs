@@ -6,6 +6,7 @@
 import System.IO
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks(manageDocks, avoidStruts)
 import XMonad.Util.Run(spawnPipe)
 import Data.Monoid
 import System.Exit
@@ -263,8 +264,8 @@ defaults = defaultConfig {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = myLayout,
-        manageHook         = myManageHook,
+        layoutHook         = avoidStruts myLayout,
+        manageHook         = manageDocks <+> myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
