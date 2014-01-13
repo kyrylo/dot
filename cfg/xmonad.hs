@@ -221,7 +221,7 @@ myEventHook = mempty
 myLogHook xmproc = do
     dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc
-    , ppTitle = xmobarColor "#dca3a3" "" . shorten 100
+    , ppTitle = xmobarColor "#dca3a3" "" . shorten 200
     }
 
 ------------------------------------------------------------------------
