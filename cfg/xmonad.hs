@@ -218,11 +218,10 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = do
-    xmproc <- spawnPipe "xmobar"
+myLogHook xmproc = do
     dynamicLogWithPP xmobarPP {
       ppOutput = hPutStrLn xmproc
-    , ppTitle = xmobarColor "green" "" . shorten 100
+    , ppTitle = xmobarColor "#dca3a3" "" . shorten 100
     }
 
 ------------------------------------------------------------------------
@@ -240,7 +239,9 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = do
+    xmproc <- spawnPipe "xmobar"
+    xmonad $ defaults xmproc
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -248,7 +249,7 @@ main = xmonad defaults
 --
 -- No need to modify this.
 --
-defaults = defaultConfig {
+defaults xmproc = defaultConfig {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
@@ -267,7 +268,7 @@ defaults = defaultConfig {
         layoutHook         = avoidStruts myLayout,
         manageHook         = manageDocks <+> myManageHook,
         handleEventHook    = myEventHook,
-        logHook            = myLogHook,
+        logHook            = myLogHook xmproc,
         startupHook        = myStartupHook
     }
 
