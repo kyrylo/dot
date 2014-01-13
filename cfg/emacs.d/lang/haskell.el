@@ -1,6 +1,6 @@
 (defun haskell-init ()
-  (indent-tabs-mode nil)
-  (haskell-indentation-mode -1)
-  (haskell-indent-mode -1))
+  (setq indent-tabs-mode nil))
 
 (add-hook 'haskell-mode-hook 'haskell-init)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
