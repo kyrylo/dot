@@ -2,8 +2,8 @@
 !                 https://github.com/kyrylo/dot
 !                                              <-- kyrylosilin@gmail.com
 Xcursor.theme: Neutral
-URxvt.font: xft:Monaco:size=7.5:antialias=true
-URxvt.boldFont: xft:Terminus:size=8:style=bold:antialias=false
+URxvt.font: xft:Smoothansi.se:size=9:antialias=true
+URxvt.boldFont: xft:Terminus:size=6:style=bold:antialias=false
 URxvt*background: #000010
 URxvt*foreground: Wheat
 URxvt*cursorColor: magenta
@@ -54,5 +54,5 @@ URxvt.cursorColor : #a4a39e
 URxvt.colorBD     : #d0c478
 URxvt.colorUL     : #d0c478
 
-Emacs.font: Monaco:size=10:antialias=false
+Emacs.font: Smoothansi.se:size=10:antialias=false
 Emacs.fontBackend: xft

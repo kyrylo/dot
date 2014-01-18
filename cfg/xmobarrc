@@ -1,5 +1,5 @@
 Config {
-    font = "xft:Proggy-7",
+    font = "xft:Anorexia-8",
     bgColor = "#000000",
     fgColor = "#ffffff",
     border = TopB,
