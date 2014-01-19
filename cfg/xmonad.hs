@@ -8,6 +8,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks(manageDocks, avoidStruts)
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Layout.NoBorders
 import Data.Monoid
 import System.Exit
 
@@ -290,7 +291,7 @@ defaults xmproc = defaultConfig {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = avoidStruts myLayout,
+        layoutHook         = smartBorders $ avoidStruts myLayout,
         manageHook         = manageDocks <+> myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook xmproc,
