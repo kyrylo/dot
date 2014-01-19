@@ -13,3 +13,9 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
+
+style "meld-color-scheme-user"
+{
+    color["inline-fg"] = "#170024"
+}
+widget "meldapp.*" style : highest "meld-color-scheme-user"
