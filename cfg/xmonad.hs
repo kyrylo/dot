@@ -31,7 +31,7 @@ myBorderWidth = 1
 -- "windows key" is usually mod4Mask.
 myModMask = mod4Mask
 
-myWorkspaces = ["1", "2", "3"]
+myWorkspaces = ["1:term", "2:www", "3:dev", "4:gfx", "5:virtual", "6:irc", "7:mail", "8:money", "9:music", "10:film"]
 
 myNormalBorderColor = "#0f0f0f"
 myFocusedBorderColor = "#721f75"
@@ -45,7 +45,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "dmenu_run -fn 'PT Mono-8' -nb white -nf black -sb '#dca3a3' -sf black -p 'Run: '")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -115,17 +115,34 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Use two monitors
     , ((modm .|. shiftMask, xK_F12   ), spawn("duo"))
+
+    , ((modm .|. shiftMask, xK_Left  ), spawn("urxvt -title Weechat -e weechat-curses &"))
+
+    , ((modm .|. shiftMask, xK_Down  ), spawn("urxvt -title Ncmpcpp -e ncmpcpp &"))
+
+    -- Lock screen
+    , ((modm .|. shiftMask, xK_b     ), spawn("xlock"))
+
+    , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
     ]
     ++
 
     --
-    -- mod-[1..9], Switch to workspace N
-    -- mod-shift-[1..9], Move client to workspace N
+    -- mod-[1..5], Switch to workspace N
+    -- mod-shift-[1..5], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        | (i, k) <- zip (XMonad.workspaces conf) $ [xK_1 .. xK_5] ++ [xK_F1 .. xK_F5]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
+
+    -- mod-[F1..F5], Switch to workspace N
+    -- mod-shift-[F1..F5], Move client to workspace N
+    --
+    -- [((m .|. modm), windows $ f i)
+    --     | (5, 10) <- zip (XMonad.workspaces conf) [xK_F1 .. xK_F5]
+    --     , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+    -- ++
 
     --
     -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3
@@ -198,8 +215,16 @@ myLayout = tiled ||| Mirror tiled ||| Full
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "Gimp"           --> doShift "4:gfx"
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore
+    , className =? "Emacs"          --> doShift "3:dev"
+    , className =? "Chromium"       --> doShift "2:www"
+    , className =? "Inkscape"       --> doShift "4:gfx"
+    , title     =? "Weechat"        --> doShift "6:irc"
+    , title     =? "Ncmpcpp"        --> doShift "9:music"
+    , className =? "Sylpheed"       --> doShift "7:mail"
+    , className =? "Gnucash"        --> doShift "8:money" ]
 
 ------------------------------------------------------------------------
 -- Event handling
