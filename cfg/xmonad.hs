@@ -124,7 +124,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Lock screen
     , ((modm .|. shiftMask, xK_b     ), spawn("xlock"))
 
-    , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
+    , ((modm .|. shiftMask, xK_Right ), spawn("opera -nomail"))
     ]
     ++
 
@@ -221,6 +221,7 @@ myManageHook = composeAll
     , resource  =? "kdesktop"       --> doIgnore
     , className =? "Emacs"          --> doShift "3:dev"
     , className =? "Chromium"       --> doShift "2:www"
+    , className =? "Opera"          --> doShift "2:www"
     , className =? "Inkscape"       --> doShift "4:gfx"
     , title     =? "Weechat"        --> doShift "6:irc"
     , title     =? "Ncmpcpp"        --> doShift "9:music"
