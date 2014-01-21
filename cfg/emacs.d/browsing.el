@@ -1,5 +1,5 @@
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "opera -nomail")
+      browse-url-generic-program "chromium")
 
 (defalias 'ack 'ack-and-a-half)
 (defalias 'ack-same 'ack-and-a-half-same)

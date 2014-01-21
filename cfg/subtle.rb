@@ -156,7 +156,7 @@ grab "W-x", [ :bottom,       :bottom66,       :bottom33       ]
 grab "W-c", [ :bottom_right, :bottom_right66, :bottom_right33 ]
 
 grab "W-Return",    "urxvt"
-grab "W-Shift_R",   "opera -nomail"
+grab "W-Shift_R",   "chromium"
 grab "W-Control_R", "urxvt -name weechat -e weechat-curses &"
 grab "W-Left",      "urxvt -name ncmpcpp -e ncmpcpp &"
 grab "W-o",         "web-clipboard"

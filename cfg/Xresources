@@ -20,7 +20,7 @@ URxvt.perl-ext:
 URxvt.perl-ext-common:  default,matcher
 
 ! Clickable URLs.
-URxvt.url-launcher   : opera -nomail
+URxvt.url-launcher   : chromium
 URxvt.matcher.button : 1
 
 URxvt.color0      : #121212

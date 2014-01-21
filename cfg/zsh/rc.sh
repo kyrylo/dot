@@ -2,7 +2,7 @@
 #                 https://github.com/kyrylo/dot
 #                                              <-- kyrylosilin@gmail.com
 export EDITOR="emacsclient -c --no-wait"
-export BROWSER="opera -nomail"
+export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
 export SAVEHIST=25000
