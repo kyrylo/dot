@@ -25,3 +25,7 @@
 
 (global-auto-revert-mode t)
 (setq auto-revert-check-vc-info t)
+
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
