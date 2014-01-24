@@ -10,3 +10,5 @@ zukitwo-themes
 localepurge
 zsh-completion-subtle
 artwiz-ru-fonts
+freetype2-cleartype
+cairo-cleartype

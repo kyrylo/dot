@@ -54,5 +54,5 @@ URxvt.cursorColor : #a4a39e
 URxvt.colorBD     : #d0c478
 URxvt.colorUL     : #d0c478
 
-Emacs.font: Smoothansi.se:size=10:antialias=false
+Emacs.font: DejavuSansMono:size=11:antialias=true
 Emacs.fontBackend: xft
