@@ -6,6 +6,7 @@
 import System.IO
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.ManageDocks(manageDocks, avoidStruts)
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Layout.NoBorders
@@ -214,7 +215,8 @@ myLayout = tiled ||| Mirror tiled ||| Full
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "MPlayer"        --> doFloat
+    [ isFullscreen --> doFullFloat
+    , className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "Gimp"           --> doShift "4:gfx"
     , resource  =? "desktop_window" --> doIgnore
