@@ -1,7 +1,5 @@
 #!/bin/sh
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 # Autostart programs.
 
 # Settings for GUI applications.

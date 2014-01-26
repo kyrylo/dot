@@ -1,8 +1,5 @@
 ##!/usr/bin/env sh
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # A bunch of programs I want to see whenever I load XMonad. Also includes XMonad
 # specific commands.
 parcellite &

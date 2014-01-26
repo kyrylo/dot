@@ -1,6 +1,3 @@
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
 export EDITOR="emacsclient -c --no-wait"
 export BROWSER=chromium
 export HISTFILE=~/.zsh_history

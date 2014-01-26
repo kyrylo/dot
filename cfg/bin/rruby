@@ -1,8 +1,4 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Immediately require Pry, when launch Ruby interpreter.
 ruby -rpry "$*"

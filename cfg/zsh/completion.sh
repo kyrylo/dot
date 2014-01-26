@@ -1,6 +1,3 @@
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
 autoload -U compinit
 compinit
 

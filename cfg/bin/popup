@@ -1,6 +1,3 @@
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
 # Opens a new tmux pane (so-called "popup") and does what you want. I use this
 # for WeeChat.
 # Example:

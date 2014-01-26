@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Use laptop screen only.
 if [ $HOSTNAME = "x220" ]
 then

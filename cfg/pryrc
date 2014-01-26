@@ -1,6 +1,3 @@
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
 Pry.color = true
 Pry.editor = 'emacsclient -t'
 

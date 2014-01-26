@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Print a colourful full width dash.
 function dash()
 {

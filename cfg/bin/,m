@@ -1,7 +1,4 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 # Find the meaning of the word.
 elinks http://www.thefreedictionary.com/"$*"

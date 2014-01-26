@@ -1,7 +1,5 @@
 # coding: utf-8
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 require 'pathname'
 ICONS_ROOT = Pathname.new(File.expand_path('~/.config/subtle/icons'))
 

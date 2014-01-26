@@ -1,6 +1,3 @@
-! Kyrylo Silin -->
-!                 https://github.com/kyrylo/dot
-!                                              <-- kyrylosilin@gmail.com
 Xcursor.theme: Neutral
 URxvt.font: xft:Smoothansi.se:size=9:antialias=true
 URxvt.boldFont: xft:Terminus:size=6:style=bold:antialias=false

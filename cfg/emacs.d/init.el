@@ -1,6 +1,3 @@
-; Kyrylo Silin -->
-;                 https://github.com/kyrylo/dot
-;                                              <-- kyrylosilin@gmail.com
 (setq config-root "~/.emacs.d")
 
 (defun config-file (file)

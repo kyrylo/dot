@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 echo 'Deploying your assets...'
 mkdir -p ~/.dot_backup
 

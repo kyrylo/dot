@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Uninstalls all installed gems.
 #   * http://nphusion.com/2009/01/14/remove-all-ruby-gems/
 #   * http://stackoverflow.com/a/15133988

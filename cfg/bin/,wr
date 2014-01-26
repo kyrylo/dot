@@ -1,8 +1,4 @@
 #!/usr/bin/env sh
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Invoke Russian Wikipedia on the terminal.
 elinks http://ru.wikipedia.org/wiki/"$*"

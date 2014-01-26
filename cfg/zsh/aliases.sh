@@ -1,6 +1,3 @@
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
 alias ..='cd ..'
 alias ls='ls -F --color'
 alias l='ls -lAh'

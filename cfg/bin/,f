@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 # Open Forvo.
 "$BROWSER" http://www.forvo.com/word/"$*"

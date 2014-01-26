@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
+
 # Damn, I hate those acronyms and slangish words!
 elinks http://www.urbandictionary.com/define.php?term="$*"

@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
-#
-# Kyrylo Silin -->
-#                 https://github.com/kyrylo/dot
-#                                              <-- kyrylosilin@gmail.com
-#
+
 # Calculates odds and wins (so-called "System" N-1/N, where N is the number of
 # events). Feed it the amount of hryvnias (integer) you want to put on a single
 # event and a bunch of space separated odds (float):

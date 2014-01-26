@@ -1,6 +1,6 @@
 -- xmonad config file
 --
--- Kyrylo Silin <kyrylosilin@gmail.com>
+-- Kyrylo Silin <silin@kyrylo.org>
 -- https://github.com/kyrylo/dot
 --
 import System.IO
