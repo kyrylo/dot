@@ -6,7 +6,8 @@
   (ruby-end-mode 1)
   (ruby-tools-mode 1)
   (flycheck-mode 1)
-  (local-set-key (kbd "RET") 'newline-and-indent))
+  (local-set-key (kbd "RET") 'newline-and-indent)
+  (minitest-mode 1))
 
 (add-hook 'ruby-mode-hook 'ruby-init)
 
