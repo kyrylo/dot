@@ -227,7 +227,8 @@ myManageHook = composeAll
     , title     =? "Weechat"        --> doShift "6:irc"
     , title     =? "Ncmpcpp"        --> doShift "9:music"
     , className =? "Sylpheed"       --> doShift "7:mail"
-    , className =? "Gnucash"        --> doShift "8:money" ]
+    , className =? "Gnucash"        --> doShift "8:money"
+    , className =? "VirtualBox"     --> doShift "5:virtual" ]
 
 ------------------------------------------------------------------------
 -- Event handling
