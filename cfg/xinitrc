@@ -12,7 +12,7 @@ xset r rate 300 50
 xset m 1 1
 
 # Minimal brightness.
-if [ $HOSTNAME = "x220" ]
+if [ `hostname` = "x220" ]
 then
     xbacklight -set 70
 else
@@ -29,7 +29,7 @@ setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:scroll,compose:ralt"
 feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
 
 # Launch a window manager.
-if [ $HOSTNAME = "x220" ]
+if [ `hostname` = "x220" ]
 then
     xmonad-autostart
 else
