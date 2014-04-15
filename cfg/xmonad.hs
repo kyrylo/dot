@@ -120,7 +120,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm .|. shiftMask, xK_Left  ), spawn("urxvt -title Weechat -e weechat-curses &"))
 
-    , ((modm .|. shiftMask, xK_Down  ), spawn("urxvt -title Ncmpcpp -e ncmpcpp &"))
+    , ((modm .|. shiftMask, xK_Down  ), spawn("ario"))
 
     -- Lock screen
     , ((modm .|. shiftMask, xK_b     ), spawn("xlock"))
@@ -226,6 +226,7 @@ myManageHook = composeAll
     , className =? "Inkscape"       --> doShift "4:gfx"
     , title     =? "Weechat"        --> doShift "6:irc"
     , title     =? "Ncmpcpp"        --> doShift "9:music"
+    , className =? "Ario"           --> doShift "9:music"
     , className =? "Sylpheed"       --> doShift "7:mail"
     , className =? "Gnucash"        --> doShift "8:money"
     , className =? "VirtualBox"     --> doShift "5:virtual" ]

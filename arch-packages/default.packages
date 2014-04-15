@@ -15,7 +15,6 @@ xclip
 zathura
 zathura-djvu
 zathura-pdf-mupdf
-ncmpcpp
 subversion
 cvs
 mercurial
@@ -58,3 +57,4 @@ unzip
 unrar
 auctex
 python2-pygments
+ario
