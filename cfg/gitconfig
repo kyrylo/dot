@@ -26,3 +26,7 @@
 	editor = emacsclient -t
 [merge]
 	tool = meld
+[instaweb]
+	local = true
+	httpd = webrick
+	browser = chromium
