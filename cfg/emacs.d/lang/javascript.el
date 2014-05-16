@@ -17,4 +17,6 @@
             (flymake-mode 1)
             (setq js2-basic-offset 2
                   indent-tabs-mode nil)
-            (hs-minor-mode)))
+            (hs-minor-mode)
+            (define-key js2-mode-map [(return)] 'newline-and-indent)
+            (define-key js2-mode-map [(backspace)] 'c-hungry-delete-backwards)))
