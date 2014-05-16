@@ -9,6 +9,7 @@ xorg-server
 xorg-server-utils
 xorg-xinit
 xf86-video-intel
+libva-intel-driver
 xf86-input-synaptics
 xterm
 wget
