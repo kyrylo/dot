@@ -16,4 +16,5 @@
             (flymake-jshint-load)
             (flymake-mode 1)
             (setq js2-basic-offset 2
-                  indent-tabs-mode nil)))
+                  indent-tabs-mode nil)
+            (hs-minor-mode)))
