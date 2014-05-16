@@ -13,3 +13,14 @@ else
 fi
 
 feh --bg-scale ~/Dropbox/pictures/wallpapers/wallpaper.jpg
+
+# Apply stupid defaults from ~/.xinitrc (they constantly reset)
+xset r rate 300 50
+xset m 1 1
+if [ `hostname` = "x220" ]
+then
+    xbacklight -set 70
+else
+    xbacklight -set 1
+fi
+setxkbmap -layout us,ru -option "grp:caps_toggle,grp_led:scroll,compose:ralt"
