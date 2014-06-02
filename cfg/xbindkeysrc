@@ -6,3 +6,6 @@ XF86AudioRaiseVolume
 
 "amixer set Master toggle"
 XF86AudioMute
+
+"mpc toggle"
+XF86Launch1
