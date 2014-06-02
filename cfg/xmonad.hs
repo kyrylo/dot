@@ -33,7 +33,7 @@ myBorderWidth = 1
 -- "windows key" is usually mod4Mask.
 myModMask = mod4Mask
 
-myWorkspaces = ["1:term", "2:www", "3:dev", "4:gfx", "5:virtual", "6:irc", "7:mail", "8:money", "9:music", "10:film"]
+myWorkspaces = ["0:mc", "1:term", "2:www", "3:dev", "4:gfx", "5:virtual", "6:irc", "7:mail", "8:money", "9:music", "10:film"]
 
 myNormalBorderColor = "#0f0f0f"
 myFocusedBorderColor = "#721f75"
@@ -126,6 +126,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_b     ), spawn("xlock"))
 
     , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
+
+    , ((modm .|. shiftMask, xK_Up    ), spawn("urxvt -title Midnight Commander -e mc -S modarin256 &"))
     ]
     ++
 
@@ -134,7 +136,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-[1..5], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) $ [xK_1 .. xK_5] ++ [xK_F1 .. xK_F5]
+        | (i, k) <- zip (XMonad.workspaces conf) $ [xK_grave] ++ [xK_1 .. xK_5] ++ [xK_F1 .. xK_F5]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
 
