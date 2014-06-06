@@ -17,6 +17,7 @@ install-packages:
 	./arch-packages/aura.build
 	yes | sudo xargs -a arch-packages/aur.packages aura -A
 	sudo xargs -a arch-packages/nodejs.packages npm -g install
+	xargs -a arch-packages/rubygems.packages gem install
 cleanup:
 	rm -r tmp
 deploy-cfg:
