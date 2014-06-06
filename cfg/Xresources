@@ -1,5 +1,5 @@
 Xcursor.theme: Neutral
-URxvt.font: xft:Smoothansi.se:size=9:antialias=true
+URxvt.font: xft:Terminus:size=9:antialias=true
 URxvt.boldFont: xft:Terminus:size=6:style=bold:antialias=false
 URxvt*background: #000010
 URxvt*foreground: Wheat
