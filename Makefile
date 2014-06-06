@@ -13,6 +13,7 @@ install-packages:
 	sudo pacman -Sy
 	yes | sudo xargs -a arch-packages/bootstrap.packages pacman -S --needed
 	yes | sudo xargs -a arch-packages/default.packages pacman -S --needed
+	(echo -ne '\n'; yes) | sudo xargs -a arch-packages/default-composite.packages pacman -S --needed
 	./arch-packages/aura.build
 	yes | sudo xargs -a arch-packages/aur.packages aura -A
 	sudo xargs -a arch-packages/nodejs.packages npm -g install
