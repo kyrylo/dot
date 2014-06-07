@@ -20,6 +20,6 @@ install-packages:
 	sudo xargs -a arch-packages/nodejs.packages npm -g install
 	xargs -a arch-packages/rubygems.packages gem install
 cleanup:
-	rm -r tmp
+	rm -rf tmp
 deploy-cfg:
 	cd cfg && ./cfg.build
