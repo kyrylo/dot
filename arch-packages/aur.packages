@@ -1,4 +1,3 @@
-subtle-hg
 termsyn
 e-wrapper-git
 dmenu2
@@ -8,7 +7,4 @@ ttf-monaco
 terminus-cyrillic
 zukitwo-themes
 localepurge
-zsh-completion-subtle
-artwiz-ru-fonts
 freetype2-cleartype
-cairo-cleartype

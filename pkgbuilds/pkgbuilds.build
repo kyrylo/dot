@@ -1,0 +1,5 @@
+cd ./pkgbuilds/artwiz-ru-fonts && mkdir -p ./tmp
+yes | PKGDEST="./tmp" SRCDEST="./tmp" BUILDDIR="./tmp" makepkg --install --needed --clean --rmdeps
+rm -r ./tmp
+rm artwiz-ru-fonts-*.pkg.tar.xz
+rm *.tar.bz2

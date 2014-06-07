@@ -15,7 +15,8 @@ install-packages:
 	yes | sudo xargs -a arch-packages/default.packages pacman -S --needed
 	(echo -ne '\n'; yes) | sudo xargs -a arch-packages/default-composite.packages pacman -S --needed
 	./arch-packages/aura.build
-	yes | sudo xargs -a arch-packages/aur.packages aura -A
+	yes | sudo xargs -a arch-packages/aur.packages aura -A --needed
+	./pkgbuilds/pkgbuilds.build
 	sudo xargs -a arch-packages/nodejs.packages npm -g install
 	xargs -a arch-packages/rubygems.packages gem install
 cleanup:
