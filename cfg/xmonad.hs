@@ -127,7 +127,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
 
-    , ((modm .|. shiftMask, xK_Up    ), spawn("urxvt -title Midnight Commander -e mc -S modarin256 &"))
+    , ((modm .|. shiftMask, xK_Up    ), spawn("urxvt -title MC -e mc -S modarin256 &"))
     ]
     ++
 
@@ -231,7 +231,8 @@ myManageHook = composeAll
     , className =? "Ario"           --> doShift "9:music"
     , className =? "Sylpheed"       --> doShift "7:mail"
     , className =? "Gnucash"        --> doShift "8:money"
-    , className =? "VirtualBox"     --> doShift "5:virtual" ]
+    , className =? "VirtualBox"     --> doShift "5:virtual"
+    , title     =? "MC"             --> doShift "0:mc"]
 
 ------------------------------------------------------------------------
 -- Event handling
