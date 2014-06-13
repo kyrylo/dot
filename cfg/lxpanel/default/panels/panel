@@ -1,0 +1,147 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+    edge=right
+    allign=left
+    margin=0
+    widthtype=pixel
+    width=753
+    height=16
+    transparent=1
+    tintcolor=#000000
+    alpha=255
+    autohide=0
+    heightwhenhidden=2
+    setdocktype=1
+    setpartialstrut=1
+    usefontcolor=1
+    fontsize=6
+    fontcolor=#ffffff
+    usefontsize=1
+    background=0
+    backgroundfile=/usr/share/lxpanel/images/background.png
+    iconsize=16
+    loglevel=2
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = menu
+    Config {
+        image=/usr/share/lxpanel/images/my-computer.png
+        system {
+        }
+        separator {
+        }
+        item {
+            command=run
+        }
+        separator {
+        }
+        item {
+            image=gnome-logout
+            command=logout
+        }
+    }
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=10
+    }
+}
+
+Plugin {
+    type = volumealsa
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=10
+    }
+}
+
+Plugin {
+    type = launchbar
+    Config {
+        Button {
+            id=firefox.desktop
+        }
+        Button {
+            id=/usr/share/applications/stardict.desktop
+        }
+        Button {
+            id=/usr/share/applications/anki.desktop
+        }
+        Button {
+            id=/usr/share/applications/gimp.desktop
+        }
+        Button {
+            id=/usr/share/applications/inkscape.desktop
+        }
+        Button {
+            id=/usr/share/applications/skype.desktop
+        }
+        Button {
+            id=/usr/share/applications/audacity.desktop
+        }
+        Button {
+            id=/usr/share/applications/gsopcast.desktop
+        }
+        Button {
+            id=/usr/share/applications/virtualbox.desktop
+        }
+    }
+}
+
+Plugin {
+    type = space
+    expand=1
+    Config {
+        Size=2
+    }
+}
+
+Plugin {
+    type = tray
+}
+
+Plugin {
+    type = space
+    Config {
+        Size=16
+    }
+}
+
+Plugin {
+    type = xkb
+    Config {
+        DisplayType=1
+        PerWinLayout=0
+        NoResetOpt=1
+        KeepSysLayouts=1
+        Model=pc105
+        LayoutsList=us
+        VariantsList=,
+        ToggleOpt=shift_caps_toggle
+        FlagSize=6
+    }
+}
+
+Plugin {
+    type = space
+    expand=1
+    Config {
+        Size=2
+    }
+}
+

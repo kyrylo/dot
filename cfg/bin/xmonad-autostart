@@ -1,7 +1,9 @@
 ##!/usr/bin/env sh
 
-# A bunch of programs I want to see whenever I load XMonad. Also includes XMonad
-# specific commands.
+# A bunch of programs I want to load whenever I start XMonad.
+
+lxpanel &
+
 parcellite &
 dropboxd&
 mpd &
