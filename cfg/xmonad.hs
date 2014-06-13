@@ -47,7 +47,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run -fn 'PT Mono-8' -nb white -nf black -sb '#dca3a3' -sf black -p 'Run: '")
+    , ((modm,               xK_p     ), spawn "dmenu_run -fn 'PT Mono-8' -nb black -nf white -sb '#dca3a3' -sf black -p 'Run: '")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
