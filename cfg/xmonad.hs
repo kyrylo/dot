@@ -33,7 +33,7 @@ myBorderWidth = 1
 -- "windows key" is usually mod4Mask.
 myModMask = mod4Mask
 
-myWorkspaces = ["0:mc", "1:term", "2:www", "3:dev", "4:gfx", "5:virtual", "6:irc", "7:mail", "8:money", "9:music", "10:film"]
+myWorkspaces = ["0:fm", "1:term", "2:www", "3:dev", "4:gfx", "5:virtual", "6:irc", "7:mail", "8:money", "9:music", "10:film"]
 
 myNormalBorderColor = "#0f0f0f"
 myFocusedBorderColor = "#721f75"
@@ -127,7 +127,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
 
-    , ((modm .|. shiftMask, xK_Up    ), spawn("urxvt -title MC -e mc -S modarin256 &"))
+    , ((modm .|. shiftMask, xK_Up    ), spawn("xfe"))
     ]
     ++
 
@@ -232,7 +232,7 @@ myManageHook = composeAll
     , className =? "Sylpheed"       --> doShift "7:mail"
     , className =? "Gnucash"        --> doShift "8:money"
     , className =? "VirtualBox"     --> doShift "5:virtual"
-    , title     =? "MC"             --> doShift "0:mc"]
+    , className =? "Xfe"            --> doShift "0:fm"]
 
 ------------------------------------------------------------------------
 -- Event handling
