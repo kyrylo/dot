@@ -19,10 +19,6 @@ unset ftp_proxy
 unset HTTP_PROXY
 unset FTP_PROXY
 
-# Allows to edit "ls" colours via ~/.dircolors file.
-d=.dircolors
-test -r $d && eval "$(dircolors $d)"
-
 # If a command is issued that can’t be executed as a normal command, and the
 # command is the name of a directory, perform the cd command to that directory.
 setopt AUTO_CD
@@ -129,5 +125,13 @@ autoload -U ~/.zsh/functions/*(:t)
 autoload -Uz manydots-magic
 manydots-magic
 
-. /usr/share/chruby/chruby.sh
+case $OSTYPE in
+    darwin*)
+	. /usr/local/share/chruby/chruby.sh
+	;;
+    *)
+	. /usr/share/chruby/chruby.sh
+	;;
+esac
+
 chruby 2.1.2

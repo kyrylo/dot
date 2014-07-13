@@ -1,5 +1,14 @@
 alias ..='cd ..'
-alias ls='ls -F --color'
+
+case "$OSTYPE" in
+  darwin*)
+    alias ls='ls -F -G'
+    ;;
+  *)
+    alias ls='ls -F --color'
+    ;;
+esac
+
 alias l='ls -lAh'
 alias ll='ls -l'
 
