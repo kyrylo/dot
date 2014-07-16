@@ -4,4 +4,6 @@
  )
 
 (custom-set-faces
- '(js2-function-param ((t (:foreground "burlywood")))))
+ (if (eq system-type 'darwin)
+     '(default ((t (:height 85 :foundry "apple" :family "DejaVu LGC Sans Mono")))))
+ '(js2-function-param ((t (:foreground "burlywood"))) t))
