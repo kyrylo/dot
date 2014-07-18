@@ -43,3 +43,4 @@
 (depends-on "yasnippet")
 (depends-on "minitest")
 (depends-on "yaml-mode")
+(depends-on "go-mode")
