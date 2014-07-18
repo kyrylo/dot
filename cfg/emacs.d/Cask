@@ -44,3 +44,4 @@
 (depends-on "minitest")
 (depends-on "yaml-mode")
 (depends-on "go-mode")
+(depends-on "web-mode")
