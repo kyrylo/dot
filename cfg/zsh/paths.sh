@@ -16,3 +16,7 @@ export PATH="$HOME/.dot/cfg/submodules/git-aliae/wip:$PATH"
 
 # Cask (http://cask.github.io)
 export PATH="$HOME/.cask/bin:$PATH"
+
+# For Go imports.
+export GOPATH="$HOME/code/gocode"
+export PATH="$HOME/code/gocode/bin:$PATH"
