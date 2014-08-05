@@ -9,9 +9,7 @@ export REPORTTIME=10
 # Enables "~/.XCompose" for Chromium and some other GTK apps.
 export GTK_IM_MODULE=xim
 
-. ~/.zsh/functions/my_prompt
 export PS1='%F{244}%3~$(git_info_for_prompt)%#%f '
-export RPS1='${vcs_info_msg_0_}'
 
 # Don't use any fucking proxies FFS!
 unset http_proxy
