@@ -5,5 +5,5 @@
 
 (custom-set-faces
  (if (eq system-type 'darwin)
-     '(default ((t (:height 85 :foundry "apple" :family "DejaVu LGC Sans Mono")))))
+     '(default ((t (:height 90 :foundry "apple" :family "Envy Code R")))))
  '(js2-function-param ((t (:foreground "burlywood"))) t))
