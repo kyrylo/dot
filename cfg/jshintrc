@@ -42,7 +42,7 @@
   // your code. It accepts three values: true if you don't want to enforce one
   // particular style but want some consistency, "single" if you want to allow
   // only single quotes and "double" if you want to allow only double quotes.
-  "quotmark": true,
+  "quotmark": false,
 
   // This option prohibits the use of explicitly undeclared variables. This
   // option is very useful for spotting leaking and mistyped variables.
