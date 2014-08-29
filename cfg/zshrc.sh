@@ -4,3 +4,4 @@
 . ~/.zsh/bindkeys.sh
 . ~/.zsh/completion.sh
 . ~/.zsh/highlighting.sh
+eval "`npm completion`"
