@@ -13,6 +13,7 @@
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'solarized-light t)
 (setq solarized-use-less-bold t)
+(setq solarized-emphasize-indicators nil)
 
 ;(set-default-font "Monaco 8")
 (global-linum-mode t)
