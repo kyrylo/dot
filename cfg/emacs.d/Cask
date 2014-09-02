@@ -46,3 +46,4 @@
 (depends-on "go-mode")
 (depends-on "web-mode")
 (depends-on "dockerfile-mode")
+(depends-on "erlang")
