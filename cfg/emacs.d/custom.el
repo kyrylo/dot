@@ -5,5 +5,5 @@
 
 (custom-set-faces
  (if (eq system-type 'darwin)
-     '(default ((t (:height 90 :foundry "apple" :family "Menlo")))))
+     '(default ((t (:height 100 :foundry "apple" :family "PragmataPro for Powerline")))))
  '(js2-function-param ((t (:foreground "burlywood"))) t))
