@@ -5,3 +5,4 @@
 . ~/.zsh/completion.sh
 . ~/.zsh/highlighting.sh
 eval "`npm completion`"
+source ~/.fzf.zsh
