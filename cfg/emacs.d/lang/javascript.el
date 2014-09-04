@@ -7,17 +7,16 @@
           (lambda()
             (flymake-jshint-load)
             (flymake-mode 1)
-            (setq js-indent-level 1
-                  tab-width 4
-                  indent-tabs-mode t)))
+            (setq js-indent-level 2
+                  tab-width 8
+                  indent-tabs-mode nil)))
 
 (add-hook 'js2-mode-hook
           (lambda()
             (flymake-jshint-load)
             (flymake-mode 1)
-            (setq js2-basic-offset 4
-                  tab-width 4
-                  s2-bounce-indent-p t)
+            (setq js2-basic-offset 2
+                  indent-tabs-mode nil)
             (hs-minor-mode)
             (define-key js2-mode-map [(return)] 'newline-and-indent)
             (define-key js2-mode-map [(backspace)] 'c-hungry-delete-backwards)))
