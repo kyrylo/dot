@@ -17,6 +17,12 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 (ac-config-default)
+(ac-flyspell-workaround)
+
+(dolist (m '(erlang-mode coffee-mode))
+  (add-to-list 'ac-modes m))
+
+(global-auto-complete-mode t)
 
 (yas-global-mode 1)
 
