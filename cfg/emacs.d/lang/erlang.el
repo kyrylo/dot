@@ -10,3 +10,9 @@
 
 (add-hook 'erlang-mode-hook '(lambda()
                                (setq indent-tabs-mode nil)))
+(defvar erlang-electric-commands
+  '(erlang-electric-comma
+    erlang-electric-semicolon
+    erlang-electric-gt))
+
+(setq erlang-electric-commands '(erlang-electric-semicolon erlang-electric-newline))
