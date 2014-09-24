@@ -71,39 +71,6 @@ Plugin {
 }
 
 Plugin {
-    type = launchbar
-    Config {
-        Button {
-            id=firefox.desktop
-        }
-        Button {
-            id=/usr/share/applications/stardict.desktop
-        }
-        Button {
-            id=/usr/share/applications/anki.desktop
-        }
-        Button {
-            id=/usr/share/applications/gimp.desktop
-        }
-        Button {
-            id=/usr/share/applications/inkscape.desktop
-        }
-        Button {
-            id=/usr/share/applications/skype.desktop
-        }
-        Button {
-            id=/usr/share/applications/audacity.desktop
-        }
-        Button {
-            id=/usr/share/applications/gsopcast.desktop
-        }
-        Button {
-            id=/usr/share/applications/virtualbox.desktop
-        }
-    }
-}
-
-Plugin {
     type = space
     expand=1
     Config {
