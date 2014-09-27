@@ -128,6 +128,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_Right ), spawn("chromium"))
 
     , ((modm .|. shiftMask, xK_Up    ), spawn("xfe"))
+
+    , ((modm .|. shiftMask, xK_s     ), spawn("screenshot-dropbox"))
     ]
     ++
 

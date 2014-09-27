@@ -9,3 +9,4 @@ haskell-temporary
 haskell-curl
 haskell-regex-pcre
 python2-pyaudio
+dropbox-cli
