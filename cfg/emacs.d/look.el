@@ -13,6 +13,6 @@
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'zenburn t)
 
-;(set-default-font "Monaco 8")
+(set-default-font "Terminus 8")
 (global-linum-mode t)
 (show-paren-mode t)
