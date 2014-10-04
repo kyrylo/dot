@@ -13,7 +13,7 @@
 (depends-on "fill-column-indicator")
 (depends-on "flycheck")
 (depends-on "flymake-easy")
-(depends-on "flymake-jshint")
+(depends-on "flymake-jslint")
 (depends-on "gh")
 (depends-on "gist")
 (depends-on "git-commit-mode")
