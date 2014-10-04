@@ -51,5 +51,5 @@ URxvt.cursorColor : #a4a39e
 URxvt.colorBD     : #d0c478
 URxvt.colorUL     : #d0c478
 
-Emacs.font: PragmataProForPowerline:size=9:antialias=true
+Emacs.font: Terminus:size=9:antialias=false
 Emacs.fontBackend: xft
