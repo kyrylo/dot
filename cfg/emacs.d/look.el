@@ -13,6 +13,6 @@
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'zenburn t)
 
-(set-default-font "PragmataPro for Powerline 9")
+(set-default-font "Monaco 9")
 (global-linum-mode t)
 (show-paren-mode t)
