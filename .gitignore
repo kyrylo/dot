@@ -11,3 +11,4 @@ cfg/emacs.d/elpa
 cfg/emacs.d/.cask
 tmp
 zsh/secret_stuff.sh
+fonts.dir
