@@ -9,4 +9,5 @@
 (add-to-list 'flymake-allowed-file-name-masks '("\\.erl\\'" flymake-erlang-init))
 
 (add-hook 'erlang-mode-hook '(lambda()
+                               (flymake-mode 1)
                                (setq indent-tabs-mode nil)))
