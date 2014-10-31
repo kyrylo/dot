@@ -30,3 +30,5 @@
 	local = true
 	httpd = webrick
 	browser = chromium
+[init]
+	templatedir = /home/kyrylo/.git
