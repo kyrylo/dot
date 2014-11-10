@@ -49,3 +49,4 @@
 (depends-on "erlang")
 (depends-on "nginx-mode")
 (depends-on "apache-mode")
+(depends-on "haxe-mode")
