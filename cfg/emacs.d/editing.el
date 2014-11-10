@@ -8,7 +8,11 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key "\C-cd" 'kill-whole-line)
 
-(setq whitespace-style '(face trailing))
+(setq whitespace-style '(tab-mark face trailing))
+(setq whitespace-display-mappings
+      '(
+        (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
+        ))
 (global-whitespace-mode t)
 
 (require 'autopair)
