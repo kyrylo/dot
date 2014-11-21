@@ -1,6 +1,6 @@
 update-emacs:
 	cd cfg/emacs.d && cask install
-	rm -f ~/.emacs.d/elpa
+	rm -rf ~/.emacs.d/elpa
 	ln -s ~/.emacs.d/.cask/**/elpa ~/.emacs.d
 update-submodules:
 	git submodule foreach git pull origin master
