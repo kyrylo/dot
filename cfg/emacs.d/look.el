@@ -16,3 +16,4 @@
 (set-default-font "Monaco 9")
 (global-linum-mode t)
 (show-paren-mode t)
+(global-hl-line-mode t)
