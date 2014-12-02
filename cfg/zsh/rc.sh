@@ -98,7 +98,7 @@ setopt APPEND_HISTORY
 # This options works like APPEND_HISTORY except that new history lines are added
 # to the $HISTFILE incrementally (as soon as they are entered), rather than
 # waiting until the shell exits.
-setopt INC_APPEND_HISTORY
+# setopt INC_APPEND_HISTORY
 
 # If a new command line being added to the history list duplicates an older one,
 # the older command is removed from the list (even if it is not the previous
