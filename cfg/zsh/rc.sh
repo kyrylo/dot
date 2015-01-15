@@ -58,7 +58,7 @@ setopt HIST_VERIFY
 
 # Imports new commands from the history file, and also causes your typed
 # commands to be appended to the history file.
-setopt SHARE_HISTORY
+# setopt SHARE_HISTORY
 
 # Parameter expansion, command substitution and arithmetic expansion are
 # performed in prompts. Substitutions within prompts do not affect the command
@@ -132,4 +132,4 @@ case $OSTYPE in
 	;;
 esac
 
-chruby 2.1.2
+chruby 2.2.0
