@@ -7,8 +7,8 @@ update-submodules:
 set-defaults:
 	xdg-mime default chromium.desktop x-scheme-handler/http
 	xdg-mime default chromium.desktop x-scheme-handler/https
-	xdg-mime default zathura.desktop application/pdf
-	xdg-mime default nautilus.desktop inode/directory
+	xdg-mime default okular.desktop application/pdf
+	xdg-mime default dolphin.desktop inode/directory
 install-packages:
 	sudo pacman -Sy
 	yes | sudo xargs -a arch-packages/bootstrap.packages pacman -S --needed
