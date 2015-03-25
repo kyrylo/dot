@@ -17,3 +17,5 @@
 (global-linum-mode t)
 (show-paren-mode t)
 (global-hl-line-mode t)
+
+(setq default-frame-alist '((cursor-color . "WhiteSmoke")))
