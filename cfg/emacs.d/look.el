@@ -19,3 +19,4 @@
 (global-hl-line-mode t)
 
 (setq default-frame-alist '((cursor-color . "WhiteSmoke")))
+(scroll-bar-mode -1)
