@@ -132,4 +132,4 @@ case $OSTYPE in
 	;;
 esac
 
-chruby 2.2.0
+chruby 2.2.2
