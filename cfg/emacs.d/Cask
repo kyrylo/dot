@@ -1,7 +1,6 @@
 (source gnu)
 (source melpa)
 
-(depends-on "ack-and-a-half")
 (depends-on "auctex")
 (depends-on "auto-complete")
 (depends-on "autopair")
@@ -51,3 +50,4 @@
 (depends-on "apache-mode")
 (depends-on "haxe-mode")
 (depends-on "neotree")
+(depends-on "rainbow-delimiters")
