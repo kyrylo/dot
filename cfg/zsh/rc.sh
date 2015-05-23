@@ -131,5 +131,3 @@ case $OSTYPE in
 	. /usr/share/chruby/chruby.sh
 	;;
 esac
-
-chruby 2.2.2
