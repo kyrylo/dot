@@ -13,10 +13,15 @@
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'zenburn t)
 
-(set-default-font "Monaco 9")
+(set-default-font "Consolas 10")
 (global-linum-mode t)
 (show-paren-mode t)
 (global-hl-line-mode t)
 
 (setq default-frame-alist '((cursor-color . "WhiteSmoke")))
 (scroll-bar-mode -1)
+
+(require 'smooth-scroll)
+(smooth-scroll-mode t)
+
+(speedbar-show-unknown-files t)

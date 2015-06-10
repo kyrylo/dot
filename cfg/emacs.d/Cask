@@ -51,3 +51,4 @@
 (depends-on "haxe-mode")
 (depends-on "neotree")
 (depends-on "rainbow-delimiters")
+(depends-on "smooth-scroll")
