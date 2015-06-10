@@ -21,7 +21,4 @@
 (setq default-frame-alist '((cursor-color . "WhiteSmoke")))
 (scroll-bar-mode -1)
 
-(require 'smooth-scroll)
-(smooth-scroll-mode t)
-
 (speedbar-show-unknown-files t)
