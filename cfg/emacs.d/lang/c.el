@@ -17,4 +17,4 @@
 (define-key c-mode-base-map (kbd "M-]") 'semantic-ia-show-summary)
 
 ;; For C extensions...
-(flycheck-clang-include-path (quote ("/opt/rubies/ruby-2.2.2/include/ruby-2.2.0")))
+(setq flycheck-clang-include-path (quote ("/opt/rubies/ruby-2.2.2/include/ruby-2.2.0")))

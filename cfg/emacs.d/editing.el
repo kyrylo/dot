@@ -3,6 +3,9 @@
 (cua-selection-mode t)
 
 (add-hook 'after-change-major-mode-hook 'fci-mode)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
