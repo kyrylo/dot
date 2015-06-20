@@ -3,6 +3,10 @@
 (defun config-file (file)
   (concat (file-name-as-directory config-root) file))
 
+(defun vendor-file (file)
+  (concat (file-name-as-directory
+           (concat (file-name-as-directory config-root) "vendor")) file))
+
 (defun config-dir (file)
   (file-name-as-directory (config-file file)))
 
@@ -18,6 +22,9 @@
 (load-file (config-file "rss.el"))
 (load-file (config-file "browsing.el"))
 (load-file (config-file "misc.el"))
+
+(load-file (vendor-file "funda-haxe-mode/funda-haxe-mode.el"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -67,3 +67,6 @@
 [submodule "vim/bundle/ragel"]
 	path = cfg/vim/bundle/ragel
 	url = git@github.com:arsenerei/vim-ragel.git
+[submodule "cfg/emacs.d/vendor/funda-haxe-mode"]
+	path = cfg/emacs.d/vendor/funda-haxe-mode
+	url = git@github.com:pierre-arlaud/funda-haxe-mode.git
