@@ -32,7 +32,9 @@
  ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
  '(indent-tabs-mode nil)
- '(speedbar-show-unknown-files t))
+ '(js-indent-level 2)
+ '(speedbar-show-unknown-files t)
+ '(tab-width 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
