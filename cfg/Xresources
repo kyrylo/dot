@@ -51,7 +51,7 @@ URxvt.cursorColor : #a4a39e
 URxvt.colorBD     : #d0c478
 URxvt.colorUL     : #d0c478
 
-Emacs.fontBackend: xft
+! Emacs.fontBackend: xft
 
 Xft.antialias:  1
 Xft.hinting:    1
