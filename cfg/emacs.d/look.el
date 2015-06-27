@@ -13,7 +13,7 @@
 (add-themes-to-load-path (config-dir "themes"))
 (load-theme 'zenburn t)
 
-(set-default-font "Consolas 10")
+(set-default-font "Pragmata Pro for Powerline 10")
 (global-linum-mode t)
 (show-paren-mode t)
 (global-hl-line-mode t)
