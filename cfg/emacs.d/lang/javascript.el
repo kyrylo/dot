@@ -11,8 +11,7 @@
 
 (add-hook 'js2-mode-hook
           (lambda()
-            (flymake-jslint-load)
-            (flymake-mode 1)
+            (flycheck-mode 1)
             (setq indent-tabs-mode nil
                   js2-basic-offset 2
                   tab-width 2
