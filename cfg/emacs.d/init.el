@@ -23,6 +23,8 @@
 (load-file (config-file "browsing.el"))
 (load-file (config-file "misc.el"))
 
+(load-file (vendor-file "emacs-crystal-mode/crystal-mode.el"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
