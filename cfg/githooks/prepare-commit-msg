@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-case "$2,$3" in
-    ,|template,)
-        FILES=`git status | grep modified -m 1 | awk '{ print $2 }'`
-        echo -e "$FILES: \n$(cat $1)" > "$1" ;;
-    *) ;;
-esac
