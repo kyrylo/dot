@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Find the meaning of the word.
-elinks http://www.thefreedictionary.com/"$*"

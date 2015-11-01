@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# A shortcut to umount usb sticks.
-sudo umount /mnt/usbstick

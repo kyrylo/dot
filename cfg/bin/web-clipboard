@@ -1,2 +1,0 @@
-#!/bin/bash
-web "`xclip -o -selection clipboard`"

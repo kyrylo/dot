@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Open Forvo.
-"$BROWSER" http://www.forvo.com/word/"$*"

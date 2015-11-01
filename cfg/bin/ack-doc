@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-# Seek multiple Word documents for a string.
-find *.doc -type f | while read file; do
-    antiword "$file" | ack $1 && echo -e "\033[40m ↑ found in $file \033[0m";
-done

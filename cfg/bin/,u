@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Damn, I hate those acronyms and slangish words!
-elinks http://www.urbandictionary.com/define.php?term="$*"

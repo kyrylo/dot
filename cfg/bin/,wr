@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Invoke Russian Wikipedia on the terminal.
-elinks http://ru.wikipedia.org/wiki/"$*"

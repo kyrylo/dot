@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# A shortcut to mount usb sticks (accessible by non-root users).
-sudo mount -o gid=users,fmask=113,dmask=002 /dev/$1 /mnt/usbstick
