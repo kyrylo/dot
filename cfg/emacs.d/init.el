@@ -33,6 +33,7 @@
  '(c-basic-offset 4)
  '(indent-tabs-mode nil)
  '(js-indent-level 2)
+ '(lua-indent-level 2)
  '(speedbar-show-unknown-files t)
  '(tab-width 4))
 (custom-set-faces
