@@ -1,3 +1,0 @@
-[Command]
-FileManager=mc %s
-Terminal=urxvt
