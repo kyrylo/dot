@@ -1,16 +1,20 @@
+;; Fill column indicator.
 (setq-default fill-column 80)
-
-(cua-selection-mode t)
-
 (add-hook 'after-change-major-mode-hook 'fci-mode)
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; Rectangular regions.
+(cua-selection-mode t)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
-(global-set-key "\C-cd" 'kill-whole-line)
 
+(show-paren-mode t)
+(global-hl-line-mode t)
+
+(setq default-frame-alist '((cursor-color . "WhiteSmoke")))
+
+;; Highlight blank lines with red.
 (setq whitespace-style '(face trailing))
 (global-whitespace-mode t)
 
@@ -27,16 +31,11 @@
 
 (global-auto-complete-mode t)
 
-(yas-global-mode 1)
-
 (setq require-final-newline t)
 (setq-default line-spacing 1)
 
 (global-auto-revert-mode t)
 (setq auto-revert-check-vc-info t)
 
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

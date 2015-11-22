@@ -23,7 +23,7 @@
 [color "grep"]
 	match = 166 bold
 [core]
-	editor = emacsclient -t
+	editor = emacs -nw
 [merge]
 	tool = meld
 [instaweb]

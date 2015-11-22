@@ -23,7 +23,8 @@ alias gpghm='git push github master'
 alias gpbb='git push bitbucket'
 alias gpbbm='git push bitbucket master'
 
-alias ee='emacsclient -t'
+e() { emacs $1 2&>/dev/null & }
+alias ee='emacs -nw'
 
 alias cp='cp -v'
 

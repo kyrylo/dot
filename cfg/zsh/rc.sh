@@ -1,4 +1,4 @@
-export EDITOR="emacsclient -c --no-wait"
+export EDITOR="ee"
 export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000

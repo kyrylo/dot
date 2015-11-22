@@ -12,18 +12,11 @@
 
 (package-initialize)
 (load-file (config-file "gui.el"))
-(load-file (config-file "look.el"))
 (load-file (config-file "editing.el"))
 (load-file (config-file "backup.el"))
 (load-file (config-file "elpa.el"))
 (load-file (config-file "lang.el"))
-(load-file (config-file "navigation.el"))
-(load-file (config-file "maps.el"))
-(load-file (config-file "rss.el"))
-(load-file (config-file "browsing.el"))
 (load-file (config-file "misc.el"))
-
-(load-file (vendor-file "emacs-crystal-mode/crystal-mode.el"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -35,7 +28,12 @@
  '(js-indent-level 2)
  '(lua-indent-level 2)
  '(speedbar-show-unknown-files t)
- '(tab-width 4))
+ '(tab-width 4)
+ '(web-mode-attr-indent-offset 2)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-indentation nil)
+ '(web-mode-markup-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
