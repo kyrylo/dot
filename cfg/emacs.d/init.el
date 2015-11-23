@@ -30,10 +30,12 @@
  '(speedbar-show-unknown-files t)
  '(tab-width 4)
  '(web-mode-attr-indent-offset 2)
+ '(web-mode-block-padding 0)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-indentation nil)
- '(web-mode-markup-indent-offset 2))
+ '(web-mode-markup-indent-offset 2)
+ '(web-mode-style-padding 0))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
