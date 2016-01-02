@@ -37,3 +37,4 @@
 (depends-on "lua-mode")
 (depends-on "zenburn-theme")
 (depends-on "json-mode")
+(depends-on "magit")

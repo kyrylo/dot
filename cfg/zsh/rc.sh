@@ -1,4 +1,4 @@
-export EDITOR="ee"
+export EDITOR="emacs -nw"
 export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000

@@ -33,3 +33,5 @@ alias mv='mv -v'
 alias tmux='tmux -2'
 
 alias ccat='pygmentize -g'
+
+alias pip=pip2
