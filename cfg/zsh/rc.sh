@@ -125,9 +125,9 @@ manydots-magic
 
 case $OSTYPE in
     darwin*)
-	. /usr/local/share/chruby/chruby.sh
-	;;
+      . /usr/local/share/chruby/chruby.sh
+    ;;
     *)
-	. /usr/share/chruby/chruby.sh
-	;;
+      . /usr/share/chruby/chruby.sh
+    ;;
 esac
