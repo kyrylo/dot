@@ -5,7 +5,7 @@
           (lambda()
             (flymake-jslint-load)
             (flymake-mode 1)
-            (setq js-indent-level 1
+            (setq js-indent-level 2
                   tab-width 2
                   indent-tabs-mode nil)))
 
