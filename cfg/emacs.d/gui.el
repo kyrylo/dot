@@ -10,4 +10,4 @@
 
 (load-theme 'zenburn t)
 
-(set-default-font "PragmataPro for Powerline-10")
+(set-default-font "PragmataPro for Powerline-11")
