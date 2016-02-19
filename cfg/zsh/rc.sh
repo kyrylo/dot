@@ -5,6 +5,7 @@ export HISTSIZE=25000
 export SAVEHIST=25000
 export REPORTTIME=10
 #export NO_PRY_COLORED_BACON=true
+export DOCKER_HOST=tcp://localhost:2375
 
 # Enables "~/.XCompose" for Chromium and some other GTK apps.
 export GTK_IM_MODULE=xim
