@@ -34,8 +34,13 @@
  '(web-mode-block-padding 0)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-closing nil)
  '(web-mode-enable-auto-indentation nil)
+ '(web-mode-enable-auto-opening nil)
+ '(web-mode-enable-auto-pairing nil)
+ '(web-mode-enable-auto-quoting nil)
  '(web-mode-markup-indent-offset 2)
+ '(web-mode-script-padding 2)
  '(web-mode-style-padding 0))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
