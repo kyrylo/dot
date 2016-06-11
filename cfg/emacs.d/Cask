@@ -39,3 +39,4 @@
 (depends-on "json-mode")
 (depends-on "magit")
 (depends-on "rust-mode")
+(depends-on "jade-mode")
