@@ -124,6 +124,8 @@ autoload -U ~/.zsh/functions/*(:t)
 autoload -Uz manydots-magic
 manydots-magic
 
+{ eval `ssh-add ~/.ssh/id_rsa` } &>/dev/null
+
 case $OSTYPE in
     darwin*)
       . /usr/local/share/chruby/chruby.sh
