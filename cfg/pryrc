@@ -1,5 +1,5 @@
 Pry.color = true
-Pry.editor = 'emacsclient -t'
+Pry.editor = 'emacs'
 
 Pry.config.theme = 'zenburn'
 Pry.config.theme_options = {:paint_key_as_symbol => true}
