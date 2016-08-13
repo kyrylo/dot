@@ -39,4 +39,6 @@
 (depends-on "json-mode")
 (depends-on "magit")
 (depends-on "rust-mode")
+(depends-on "flycheck-rust")
 (depends-on "jade-mode")
+(depends-on "scala-mode")
