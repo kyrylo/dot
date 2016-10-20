@@ -19,4 +19,5 @@ export PATH="$HOME/.cask/bin:$PATH"
 
 # For Go imports.
 export GOPATH="$HOME/code/gocode"
-export PATH="$HOME/code/gocode/bin:$PATH"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
