@@ -7,6 +7,7 @@
 (scroll-bar-mode -1)
 (column-number-mode t)
 (global-linum-mode t)
+(setq-default cursor-type 'hbar)
 
 (load-theme 'zenburn t)
 
