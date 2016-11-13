@@ -18,6 +18,5 @@ export PATH="$HOME/.dot/cfg/submodules/git-aliae/wip:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
 
 # For Go imports.
-export GOPATH="$HOME/code/gocode"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
+export GOPATH="$HOME/Code/gocode"
+export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
