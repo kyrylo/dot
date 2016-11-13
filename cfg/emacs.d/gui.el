@@ -16,4 +16,4 @@
 (set-face-attribute 'vertical-border
                     nil
                     :foreground "#3f3f3f")
-(set-window-fringes nil 5 5)
+(set-fringe-mode '(1 . 0))
