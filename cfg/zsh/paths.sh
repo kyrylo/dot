@@ -20,3 +20,8 @@ export PATH="$HOME/.cask/bin:$PATH"
 # For Go imports.
 export GOPATH="$HOME/Code/gocode"
 export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
+
+export CDPATH="$CDPATH:$GOPATH/src/github.com"
+export CDPATH="$CDPATH:$GOPATH/src/code.google.com"
+export CDPATH="$CDPATH:$GOPATH/src/golang.org"
+export CDPATH="$CDPATH:$GOPATH/src/gopkg.in"
