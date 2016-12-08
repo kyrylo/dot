@@ -6,4 +6,4 @@
 . ~/.zsh/highlighting.sh
 eval "`npm completion`"
 
-chruby 2.3.1
+chruby 2.3.3
