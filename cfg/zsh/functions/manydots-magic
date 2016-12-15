@@ -28,119 +28,119 @@
 #     manydots-magic
 #
 
-manydots-magic.self-insert() {
-    emulate -L zsh
-    local self_insert_function magic_count
-    zstyle -s ':manydots-magic' self-insert-function self_insert_function
+# manydots-magic.self-insert() {
+#     emulate -L zsh
+#     local self_insert_function magic_count
+#     zstyle -s ':manydots-magic' self-insert-function self_insert_function
 
-    if [[ "$KEYS" == .* && "$LBUFFER" != *...* && "$LBUFFER" == *.. ]] && {
-        local -a words
-        words=("${(@Q)${(z)LBUFFER}}")
-        [[ $words[-1] == (|*[/=]|[\<\>=]\().. ]]
-    }
-    then
-        [[ "$LASTWIDGET" == (self-insert|backward-delete-char) ]] &&
-        zstyle -s ':manydots-magic' magic-count magic_count
-        zstyle ':manydots-magic' magic-count $((magic_count+1))
-        LBUFFER="$LBUFFER/."
-        zle "$self_insert_function"
-        return
-    fi
+#     if [[ "$KEYS" == .* && "$LBUFFER" != *...* && "$LBUFFER" == *.. ]] && {
+#         local -a words
+#         words=("${(@Q)${(z)LBUFFER}}")
+#         [[ $words[-1] == (|*[/=]|[\<\>=]\().. ]]
+#     }
+#     then
+#         [[ "$LASTWIDGET" == (self-insert|backward-delete-char) ]] &&
+#         zstyle -s ':manydots-magic' magic-count magic_count
+#         zstyle ':manydots-magic' magic-count $((magic_count+1))
+#         LBUFFER="$LBUFFER/."
+#         zle "$self_insert_function"
+#         return
+#     fi
 
-    # cancel expansion if it does not seem right
-    if [[ "$KEYS" != [=/,:\;\|\&\<\>\(\)\[\]{}^~\'\"\`[:space:]]* &&
-        "$LASTWIDGET" == (self-insert|backward-delete-char) && "$LBUFFER" == *../.. ]] && {
-        zstyle -s ':manydots-magic' magic-count magic_count
-        [[ "$magic_count" -gt 0 ]]
-    }
-    then
-        repeat $magic_count LBUFFER="${LBUFFER%/..}"
-        repeat $magic_count LBUFFER="$LBUFFER."
-    fi
+#     # cancel expansion if it does not seem right
+#     if [[ "$KEYS" != [=/,:\;\|\&\<\>\(\)\[\]{}^~\'\"\`[:space:]]* &&
+#         "$LASTWIDGET" == (self-insert|backward-delete-char) && "$LBUFFER" == *../.. ]] && {
+#         zstyle -s ':manydots-magic' magic-count magic_count
+#         [[ "$magic_count" -gt 0 ]]
+#     }
+#     then
+#         repeat $magic_count LBUFFER="${LBUFFER%/..}"
+#         repeat $magic_count LBUFFER="$LBUFFER."
+#     fi
 
-    zstyle ':manydots-magic' magic-count 0
+#     zstyle ':manydots-magic' magic-count 0
 
-    zle "$self_insert_function"
-}
+#     zle "$self_insert_function"
+# }
 
-manydots-magic.backward-delete-char() {
-    emulate -L zsh
-    local backward_delete_char_function
-    zstyle -s ':manydots-magic' backward-delete-char-function backward_delete_char_function
+# manydots-magic.backward-delete-char() {
+#     emulate -L zsh
+#     local backward_delete_char_function
+#     zstyle -s ':manydots-magic' backward-delete-char-function backward_delete_char_function
 
-    if [[ "$LASTWIDGET" == (self-insert|backward-delete-char) && "$LBUFFER" == *../.. ]] && {
-        local magic_count
-        zstyle -s ':manydots-magic' magic-count magic_count
-        [[ "$magic_count" -gt 0 ]]
-    }
-    then
-        zstyle ':manydots-magic' magic-count $((magic_count-1))
-        LBUFFER="${LBUFFER%..}"
-    else
-        zstyle ':manydots-magic' magic-count 0
-    fi
+#     if [[ "$LASTWIDGET" == (self-insert|backward-delete-char) && "$LBUFFER" == *../.. ]] && {
+#         local magic_count
+#         zstyle -s ':manydots-magic' magic-count magic_count
+#         [[ "$magic_count" -gt 0 ]]
+#     }
+#     then
+#         zstyle ':manydots-magic' magic-count $((magic_count-1))
+#         LBUFFER="${LBUFFER%..}"
+#     else
+#         zstyle ':manydots-magic' magic-count 0
+#     fi
 
-    zle "$backward_delete_char_function"
-}
+#     zle "$backward_delete_char_function"
+# }
 
-manydots-magic.on() {
-    emulate -L zsh
-    local self_insert_function="${$(zle -lL | awk \
-        '$1=="zle"&&$2=="-N"&&$3=="self-insert"{print $4;exit}'):-.self-insert}"
+# manydots-magic.on() {
+#     emulate -L zsh
+#     local self_insert_function="${$(zle -lL | awk \
+#         '$1=="zle"&&$2=="-N"&&$3=="self-insert"{print $4;exit}'):-.self-insert}"
 
-    [[ "$self_insert_function" == manydots-magic.self-insert ]] &&
-        return 0
+#     [[ "$self_insert_function" == manydots-magic.self-insert ]] &&
+#         return 0
 
-    # For url-quote-magic which does not zle -N itself
-    zle -la "$self_insert_function" || zle -N "$self_insert_function"
+#     # For url-quote-magic which does not zle -N itself
+#     zle -la "$self_insert_function" || zle -N "$self_insert_function"
 
-    zstyle ':manydots-magic' self-insert-function "$self_insert_function"
+#     zstyle ':manydots-magic' self-insert-function "$self_insert_function"
 
-    zle -A manydots-magic.self-insert self-insert
+#     zle -A manydots-magic.self-insert self-insert
 
-    local backward_delete_char_function="$(zle -lL | awk \
-        '$1=="zle"&&$2=="-N"&&$3=="backward-delete-char"{print $4;exit}')"
+#     local backward_delete_char_function="$(zle -lL | awk \
+#         '$1=="zle"&&$2=="-N"&&$3=="backward-delete-char"{print $4;exit}')"
 
-    if [[ -z "$backward_delete_char_function" ]]
-    then
-        zle -A backward-delete-char manydots-magic.orig.backward-delete-char
-        backward_delete_char_function=manydots-magic.orig.backward-delete-char
-    fi
+#     if [[ -z "$backward_delete_char_function" ]]
+#     then
+#         zle -A backward-delete-char manydots-magic.orig.backward-delete-char
+#         backward_delete_char_function=manydots-magic.orig.backward-delete-char
+#     fi
 
-    zstyle ':manydots-magic' backward-delete-char-function "$backward_delete_char_function"
+#     zstyle ':manydots-magic' backward-delete-char-function "$backward_delete_char_function"
 
-    zle -A manydots-magic.backward-delete-char backward-delete-char
+#     zle -A manydots-magic.backward-delete-char backward-delete-char
 
-    zstyle ':manydots-magic' magic-count 0
+#     zstyle ':manydots-magic' magic-count 0
 
-    return 0
-}
+#     return 0
+# }
 
-manydots-magic.off() {
-    emulate -L zsh
-    local self_insert_function backward_delete_char_function
-    zstyle -s ':manydots-magic' self-insert-function self_insert_function
+# manydots-magic.off() {
+#     emulate -L zsh
+#     local self_insert_function backward_delete_char_function
+#     zstyle -s ':manydots-magic' self-insert-function self_insert_function
 
-    [[ -n "$self_insert_function" ]] &&
-        zle -A "$self_insert_function" self-insert
+#     [[ -n "$self_insert_function" ]] &&
+#         zle -A "$self_insert_function" self-insert
 
-    zstyle -s ':manydots-magic' backward-delete-char-function backward_delete_char_function
+#     zstyle -s ':manydots-magic' backward-delete-char-function backward_delete_char_function
 
-    [[ -n "$backward_delete_char_function" ]] &&
-        zle -A "$backward_delete_char_function" backward-delete-char
+#     [[ -n "$backward_delete_char_function" ]] &&
+#         zle -A "$backward_delete_char_function" backward-delete-char
 
-    zstyle ':manydots-magic' magic-count 0
+#     zstyle ':manydots-magic' magic-count 0
 
-    return 0
-}
+#     return 0
+# }
 
-zle -N manydots-magic.self-insert
-zle -N manydots-magic.backward-delete-char
-zle -N manydots-magic.on
-zle -N manydots-magic.off
+# zle -N manydots-magic.self-insert
+# zle -N manydots-magic.backward-delete-char
+# zle -N manydots-magic.on
+# zle -N manydots-magic.off
 
-manydots-magic() {
-    manydots-magic.on
-}
+# manydots-magic() {
+#     manydots-magic.on
+# }
 
-[[ -o kshautoload ]] || manydots-magic "$@"
+# [[ -o kshautoload ]] || manydots-magic "$@"

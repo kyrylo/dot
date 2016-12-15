@@ -1,24 +1,13 @@
 export EDITOR="emacs -nw"
-export BROWSER=chromium
 export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
 export SAVEHIST=25000
 export REPORTTIME=10
-#export NO_PRY_COLORED_BACON=true
 export DOCKER_HOST=tcp://localhost:2375
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Enables "~/.XCompose" for Chromium and some other GTK apps.
-export GTK_IM_MODULE=xim
-
 export PS1='%F{244}%3~$(git_info_for_prompt)%#%f '
-
-# Don't use any fucking proxies FFS!
-unset http_proxy
-unset ftp_proxy
-unset HTTP_PROXY
-unset FTP_PROXY
 
 # If a command is issued that can’t be executed as a normal command, and the
 # command is the name of a directory, perform the cd command to that directory.
@@ -115,16 +104,12 @@ setopt HIST_REDUCE_BLANKS
 # Turns on interactive comments; comments begin with a #.
 setopt INTERACTIVECOMMENTS
 
-# Vi editing mode.
-bindkey -v
+# Emacs editing mode.
+bindkey -e
 
 # Custom functions.
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
-
-# Converts '...' to '../..' (inline).
-autoload -Uz manydots-magic
-manydots-magic
 
 { eval `ssh-add ~/.ssh/id_rsa` } &>/dev/null
 
