@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Immediately require Pry, when launch Ruby interpreter.
-ruby -rpry "$*"

@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Invoke Google on the terminal. Kudos to rking. ☺
-elinks http://www.google.com/search?q="$*"
