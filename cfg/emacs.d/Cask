@@ -44,3 +44,5 @@
 (depends-on "scala-mode")
 (depends-on "less-css-mode")
 (depends-on "csharp-mode")
+(depends-on "typescript-mode")
+(depends-on "tide")
