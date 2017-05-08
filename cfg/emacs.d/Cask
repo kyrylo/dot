@@ -46,3 +46,4 @@
 (depends-on "csharp-mode")
 (depends-on "typescript-mode")
 (depends-on "tide")
+(depends-on "restclient")
