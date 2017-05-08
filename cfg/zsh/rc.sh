@@ -3,8 +3,6 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=25000
 export SAVEHIST=25000
 export REPORTTIME=10
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 export PS1='%F{244}%3~$(git_info_for_prompt)%#%f '
 
