@@ -39,3 +39,5 @@
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setq smerge-command-prefix "\C-cv")
