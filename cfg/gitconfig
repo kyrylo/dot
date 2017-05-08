@@ -32,3 +32,12 @@
 	browser = chromium
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[http]
+	cookiefile = /Users/kyrylo/.gitcookies
+[alias]
+	change = codereview change
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	submit = codereview submit
+	sync = codereview sync
