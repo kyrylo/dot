@@ -20,7 +20,6 @@
 (depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "slim-mode")
-(depends-on "smart-tabs-mode")
 (depends-on "yard-mode")
 (depends-on "yaml-mode")
 (depends-on "go-mode")
