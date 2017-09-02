@@ -8,7 +8,6 @@
 (depends-on "flycheck")
 (depends-on "flymake-easy")
 (depends-on "flymake-jslint")
-(depends-on "haml-mode")
 (depends-on "haskell-mode")
 (depends-on "js2-mode")
 (depends-on "markdown-mode")
