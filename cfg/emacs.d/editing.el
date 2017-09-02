@@ -7,8 +7,6 @@
 ;; Rectangular regions.
 (cua-selection-mode t)
 
-(global-set-key (kbd "C-=") 'er/expand-region)
-
 (show-paren-mode t)
 (global-hl-line-mode t)
 
