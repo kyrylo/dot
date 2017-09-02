@@ -16,8 +16,7 @@
 (setq whitespace-style '(face trailing))
 (global-whitespace-mode t)
 
-(require 'autopair)
-(autopair-global-mode)
+(electric-pair-mode)
 
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")

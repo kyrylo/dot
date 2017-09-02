@@ -3,7 +3,6 @@
 
 (depends-on "auctex")
 (depends-on "auto-complete")
-(depends-on "autopair")
 (depends-on "coffee-mode")
 (depends-on "fill-column-indicator")
 (depends-on "flycheck")
