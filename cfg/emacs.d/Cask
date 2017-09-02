@@ -11,7 +11,6 @@
 (depends-on "haskell-mode")
 (depends-on "js2-mode")
 (depends-on "markdown-mode")
-(depends-on "org")
 (depends-on "php-mode")
 (depends-on "ruby-end")
 (depends-on "ruby-tools")
