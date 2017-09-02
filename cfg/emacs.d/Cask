@@ -31,7 +31,6 @@
 (depends-on "erlang")
 (depends-on "nginx-mode")
 (depends-on "apache-mode")
-(depends-on "neotree")
 (depends-on "rainbow-delimiters")
 (depends-on "lua-mode")
 (depends-on "zenburn-theme")

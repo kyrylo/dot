@@ -1,8 +1,5 @@
 (setq vc-follow-symlinks 1)
 
-;; Maps.
-(global-set-key [f8] 'neotree-toggle)
-
 (global-set-key (kbd "C-.")
                 (lambda ()
                   (interactive)
