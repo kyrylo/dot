@@ -26,7 +26,6 @@
 (depends-on "web-mode")
 (depends-on "dockerfile-mode")
 (depends-on "erlang")
-(depends-on "nginx-mode")
 (depends-on "apache-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "lua-mode")
