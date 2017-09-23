@@ -11,7 +11,7 @@
 
 (load-theme 'zenburn t)
 
-(set-default-font "PragmataPro for Powerline-11")
+(set-default-font "SF Mono-10")
 
 (set-face-attribute 'vertical-border
                     nil
