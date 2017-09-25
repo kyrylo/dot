@@ -4,4 +4,4 @@
 . ~/.zsh/completion.sh
 . ~/.zsh/highlighting.sh
 
-chruby 2.4.0
+chruby 2.4.2
