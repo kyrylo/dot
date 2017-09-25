@@ -7,11 +7,10 @@
 (scroll-bar-mode -1)
 (column-number-mode t)
 (global-linum-mode t)
-(setq-default cursor-type 'hbar)
 
 (load-theme 'zenburn t)
 
-(set-default-font "SF Mono-10")
+(set-default-font "PragmataPro for Powerline-11")
 
 (set-face-attribute 'vertical-border
                     nil
