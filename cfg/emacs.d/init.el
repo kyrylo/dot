@@ -23,10 +23,7 @@
 (global-linum-mode t)
 
 (load-theme 'zenburn t)
-
 (set-default-font "PragmataPro for Powerline-11")
-
-(set-face-attribute 'vertical-border nil :foreground "#3f3f3f")
 (set-fringe-mode '(1 . 0))
 
 ;;
@@ -39,8 +36,6 @@
 (show-paren-mode t)
 (global-hl-line-mode t)
 
-(setq default-frame-alist '((cursor-color . "WhiteSmoke")))
-
 ;; Highlight blank lines with red, long lines with pink.
 (setq whitespace-line-column 80)
 (setq whitespace-style '(face trailing lines-tail))
@@ -48,15 +43,11 @@
 
 (electric-pair-mode)
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
-(ac-config-default)
-(ac-flyspell-workaround)
-
-(dolist (m '(erlang-mode coffee-mode))
-  (add-to-list 'ac-modes m))
-
-(global-auto-complete-mode t)
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+;; (ac-config-default)
+;; (ac-flyspell-workaround)
+;; (global-auto-complete-mode t)
 
 (setq require-final-newline t)
 (setq-default line-spacing 1)
