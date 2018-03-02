@@ -29,7 +29,7 @@
 [instaweb]
 	local = true
 	httpd = webrick
-	browser = chromium
+	browser = safari
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [http]
