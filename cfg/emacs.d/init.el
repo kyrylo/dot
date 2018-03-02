@@ -3,64 +3,113 @@
 (defun config-file (file)
   (concat (file-name-as-directory config-root) file))
 
-(defun vendor-file (file)
-  (concat (file-name-as-directory
-           (concat (file-name-as-directory config-root) "vendor")) file))
-
 (defun config-dir (file)
   (file-name-as-directory (config-file file)))
 
 (package-initialize)
-(load-file (config-file "gui.el"))
-(load-file (config-file "editing.el"))
-(load-file (config-file "backup.el"))
-(load-file (config-file "elpa.el"))
-(load-file (config-file "lang.el"))
-(load-file (config-file "misc.el"))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(c-basic-offset 4)
- '(css-indent-offset 2)
- '(custom-safe-themes
-   (quote
-    ("67e998c3c23fe24ed0fb92b9de75011b92f35d3e89344157ae0d544d50a63a72" default)))
- '(fci-rule-color "#383838")
- '(indent-tabs-mode nil)
- '(js-indent-level 2)
- '(lua-indent-level 2)
- '(nrepl-message-colors
-   (quote
-    ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
- '(speedbar-show-unknown-files t)
- '(tab-width 4)
- '(vc-annotate-background "#2B2B2B")
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#BC8383")
-     (40 . "#CC9393")
-     (60 . "#DFAF8F")
-     (80 . "#D0BF8F")
-     (100 . "#E0CF9F")
-     (120 . "#F0DFAF")
-     (140 . "#5F7F5F")
-     (160 . "#7F9F7F")
-     (180 . "#8FB28F")
-     (200 . "#9FC59F")
-     (220 . "#AFD8AF")
-     (240 . "#BFEBBF")
-     (260 . "#93E0E3")
-     (280 . "#6CA0A3")
-     (300 . "#7CB8BB")
-     (320 . "#8CD0D3")
-     (340 . "#94BFF3")
-     (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
+;;
+;; GUI
+;;
+
+;; No welcome panes.
+(setq inhibit-startup-message t
+      initial-scratch-message nil)
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(column-number-mode t)
+(global-linum-mode t)
+
+(load-theme 'zenburn t)
+
+(set-default-font "PragmataPro for Powerline-11")
+
+(set-face-attribute 'vertical-border nil :foreground "#3f3f3f")
+(set-fringe-mode '(1 . 0))
+
+;;
+;; EDITING
+;;
+
+;; Rectangular regions.
+(cua-selection-mode t)
+
+(show-paren-mode t)
+(global-hl-line-mode t)
+
+(setq default-frame-alist '((cursor-color . "WhiteSmoke")))
+
+;; Highlight blank lines with red, long lines with pink.
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face trailing lines-tail))
+(global-whitespace-mode t)
+
+(electric-pair-mode)
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(ac-config-default)
+(ac-flyspell-workaround)
+
+(dolist (m '(erlang-mode coffee-mode))
+  (add-to-list 'ac-modes m))
+
+(global-auto-complete-mode t)
+
+(setq require-final-newline t)
+(setq-default line-spacing 1)
+
+(global-auto-revert-mode t)
+(setq auto-revert-check-vc-info t)
+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setq smerge-command-prefix "\C-cv")
+
+;;
+;; BACKUP
+;;
+
+(setq
+   backup-by-copying t
+   backup-directory-alist `((".*" . "~/.emacsaves"))
+   auto-save-file-name-transforms `((".*", "~/.emacsaves"))
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+
+;;
+;; ELPA
+;;
+
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+;;
+;; LANG
+;;
+
+(dolist (elem (directory-files (config-dir "lang")))
+  (when (string-match-p "\\.el$" elem)
+    (let ((filename (concat (config-dir "lang") elem)))
+      (load-file filename))))
+
+;;
+;; MISC
+;;
+
+(setq vc-follow-symlinks 1)
+
+(global-set-key (kbd "C-.")
+                (lambda ()
+                  (interactive)
+                  (save-excursion (mark-whole-buffer)
+                  (indent-region (region-beginning) (region-end)))))
+
+(setq gc-cons-threshold 800000)
