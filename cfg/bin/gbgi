@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-# Build a gemspec in the current directory and install that gem.
-gem build *.gemspec && gem install *.gem
