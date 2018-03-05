@@ -7,10 +7,7 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-# Man pages.
-export MANPATH="/usr/local/man:$MANPATH"
-
-# Some k00 Git aliases.
+# Custom Git aliases.
 export PATH="$HOME/.dot/cfg/submodules/git-aliae/bin:$PATH"
 export PATH="$HOME/.dot/cfg/submodules/git-aliae/wip:$PATH"
 
@@ -20,8 +17,3 @@ export PATH="$HOME/.cask/bin:$PATH"
 export GOPATH="$HOME/Code/gocode"
 export PATH="$PATH:$GOPATH/bin"
 export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
-
-export CDPATH="$CDPATH:$GOPATH/src/github.com"
-export CDPATH="$CDPATH:$GOPATH/src/code.google.com"
-export CDPATH="$CDPATH:$GOPATH/src/golang.org"
-export CDPATH="$CDPATH:$GOPATH/src/gopkg.in"
