@@ -25,6 +25,7 @@
 (load-theme 'zenburn t)
 (set-default-font "PragmataPro for Powerline-11")
 (set-fringe-mode '(1 . 0))
+(set-face-attribute 'vertical-border nil :foreground "#3f3f3f")
 
 ;;
 ;; EDITING
