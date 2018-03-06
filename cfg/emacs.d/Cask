@@ -17,4 +17,3 @@
 (depends-on "magit")
 (depends-on "jade-mode")
 (depends-on "typescript-mode")
-(depends-on "tide")
