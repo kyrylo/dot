@@ -24,6 +24,9 @@ export GOPATH="$HOME/Code/gocode"
 export PATH="$PATH:$GOPATH/bin"
 export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
 
+# Rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 #
 # ALIASES
 #
