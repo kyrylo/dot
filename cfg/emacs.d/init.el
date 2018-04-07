@@ -100,7 +100,6 @@
             (electric-indent-mode 1)
             (ruby-end-mode 1)
             (ruby-tools-mode 1)
-            (flycheck-mode 1)
             (local-set-key (kbd "RET") 'newline-and-indent)))
 
 ;;
