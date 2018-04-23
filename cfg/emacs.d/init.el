@@ -102,6 +102,13 @@
             (ruby-tools-mode 1)
             (local-set-key (kbd "RET") 'newline-and-indent)))
 
+;; WEB MODE
+
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda()
+            (setq web-mode-markup-indent-offset 2)))
+
 ;;
 ;; MISC
 ;;
@@ -113,5 +120,3 @@
                   (interactive)
                   (save-excursion (mark-whole-buffer)
                   (indent-region (region-beginning) (region-end)))))
-
-(setq gc-cons-threshold 800000)
