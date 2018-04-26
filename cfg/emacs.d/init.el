@@ -60,6 +60,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq smerge-command-prefix "\C-cv")
+(setq-default fill-column 80)
 
 ;;
 ;; BACKUP
