@@ -62,6 +62,9 @@
 (setq smerge-command-prefix "\C-cv")
 (setq-default fill-column 80)
 
+;; Allow copy-pasting when Emacs is in terminal mode.
+(setq select-enable-clipboard t)
+
 ;;
 ;; BACKUP
 ;;
@@ -109,6 +112,12 @@
 (add-hook 'web-mode-hook
           (lambda()
             (setq web-mode-markup-indent-offset 2)))
+
+;; RUST
+
+(add-hook 'rust-mode-hook
+          (lambda()
+            (setq rust-format-on-save t)))
 
 ;;
 ;; MISC
