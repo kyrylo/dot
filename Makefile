@@ -1,5 +1,5 @@
 update-emacs:
-	cd cfg/emacs.d && cask install
+	cd ~/.emacs.d && cask install
 	rm -rf ~/.emacs.d/elpa
 	ln -s ~/.emacs.d/.cask/**/elpa ~/.emacs.d
 update-submodules:

@@ -1,3 +1,3 @@
-[submodule "git-aliae"]
-	path = cfg/submodules/git-aliae
-	url = git@github.com:ConradIrwin/git-aliae.git
+[submodule "files/git-aliae/.git-aliae"]
+	path = files/git-aliae/.git-aliae
+	url = https://github.com/ConradIrwin/git-aliae

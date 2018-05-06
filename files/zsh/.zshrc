@@ -14,8 +14,8 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # Custom Git aliases.
-export PATH="$HOME/.dot/cfg/submodules/git-aliae/bin:$PATH"
-export PATH="$HOME/.dot/cfg/submodules/git-aliae/wip:$PATH"
+export PATH="$HOME/.git-aliae/bin:$PATH"
+export PATH="$HOME/.git-aliae/wip:$PATH"
 
 # Cask (http://cask.github.io)
 export PATH="$HOME/.cask/bin:$PATH"

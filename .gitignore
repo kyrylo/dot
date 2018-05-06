@@ -1,14 +1,2 @@
-cfg/vim/.netrwhist
-*~
-#*
-*.eld
-cfg/emacs.d/elpa/archives/**/*
-cfg/emacs.d/ac-comphist.dat
-cfg/emacs.d/var/**/*
-cfg/emacs.d/url/*
-cfg/emacs.d/semanticdb
-cfg/emacs.d/elpa
-cfg/emacs.d/.cask
-tmp
-zsh/secret_stuff.sh
-fonts.dir
+files/emacs/.emacs.d/.cask
+files/emacs/.emacs.d/auto-save-list
