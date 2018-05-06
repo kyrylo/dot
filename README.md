@@ -11,7 +11,5 @@ Installation
 ------------
 
 ```sh
-git clone git@github.com:kyrylo/dot.git
-cd dot
-./install.sh
+make install
 ```
