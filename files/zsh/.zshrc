@@ -20,12 +20,16 @@ export PATH="$HOME/.git-aliae/wip:$PATH"
 # Cask (http://cask.github.io)
 export PATH="$HOME/.cask/bin:$PATH"
 
+# Golang.
 export GOPATH="$HOME/Code/gocode"
 export PATH="$PATH:$GOPATH/bin"
 export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
 
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Node.js
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 #
 # ALIASES
