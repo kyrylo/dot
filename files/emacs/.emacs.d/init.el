@@ -54,7 +54,7 @@
 (setq-default line-spacing 1)
 
 (global-auto-revert-mode t)
-(setq auto-revert-check-vc-info t)
+;; (setq auto-revert-check-vc-info t)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
