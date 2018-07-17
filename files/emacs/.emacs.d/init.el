@@ -120,6 +120,12 @@
             (setq rust-format-on-save t)))
 
 ;;
+;; CSS
+;;
+
+(setq css-indent-offset 2)
+
+;;
 ;; MISC
 ;;
 
