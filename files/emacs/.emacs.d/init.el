@@ -23,9 +23,14 @@
 (global-linum-mode t)
 
 (load-theme 'zenburn t)
-(set-default-font "PragmataPro for Powerline-10")
+(set-default-font "PragmataPro for Powerline-12")
 (set-fringe-mode '(1 . 0))
 (set-face-attribute 'vertical-border nil :foreground "#3f3f3f")
+
+;; Speedbar.
+(add-to-list 'default-frame-alist '(font . "PragmataPro for Powerline-12"))
+(setq speedbar-directory-unshown-regexp "^\\(\\.\\.*$\\)\\'"
+      speedbar-show-unknown-files t)
 
 ;;
 ;; EDITING
