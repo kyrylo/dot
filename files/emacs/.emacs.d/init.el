@@ -31,6 +31,7 @@
 (add-to-list 'default-frame-alist '(font . "PragmataPro for Powerline-12"))
 (setq speedbar-directory-unshown-regexp "^\\(\\.\\.*$\\)\\'"
       speedbar-show-unknown-files t)
+(global-set-key (kbd "C-x p") 'speedbar-get-focush)
 
 ;;
 ;; EDITING
