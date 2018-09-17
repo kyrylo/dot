@@ -24,6 +24,7 @@
 	match = 166 bold
 [core]
 	editor = emacs -nw
+	quotepath = false
 [merge]
 	tool = meld
 [instaweb]
@@ -41,3 +42,5 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+[push]
+	default = current
