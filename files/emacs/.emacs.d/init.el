@@ -71,6 +71,9 @@
 ;; Allow copy-pasting when Emacs is in terminal mode.
 (setq select-enable-clipboard t)
 
+;; Don't ever load change-log-mode since it gets in the way of markdown-mode.
+(rassq-delete-all 'change-log-mode auto-mode-alist)
+
 ;;
 ;; BACKUP
 ;;
