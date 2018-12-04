@@ -18,3 +18,5 @@
 (depends-on "jade-mode")
 (depends-on "typescript-mode")
 (depends-on "rust-mode")
+(depends-on "vue-mode")
+(depends-on "prettier-js")

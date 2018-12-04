@@ -135,6 +135,22 @@
 (setq css-indent-offset 2)
 
 ;;
+;; JavaScript
+;;
+(defun prettier-js-defaults-hook ()
+  (setq prettier-js-args '(
+                           "--no-semi"
+                           "--single-quote"
+                           "--trailing-comma" "es5"
+                           "--arrow-parens" "always")))
+
+(add-hook 'js-mode-hook 'prettier-js-mode)
+(add-hook 'js-mode-hook 'prettier-js-defaults-hook)
+
+(add-hook 'vue-mode-hook 'prettier-js-mode)
+(add-hook 'vue-mode-hook 'prettier-js-defaults-hook)
+
+;;
 ;; MISC
 ;;
 
