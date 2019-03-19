@@ -5,8 +5,13 @@
 (depends-on "auto-complete")
 (depends-on "js2-mode")
 (depends-on "markdown-mode")
+
+;; Ruby
 (depends-on "ruby-end")
 (depends-on "ruby-tools")
+(depends-on "rspec-mode")
+(depends-on "inf-ruby")
+
 (depends-on "scss-mode")
 (depends-on "yaml-mode")
 (depends-on "go-mode")

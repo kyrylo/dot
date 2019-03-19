@@ -108,6 +108,7 @@
 ;; RUBY
 
 (setq ruby-insert-encoding-magic-comment nil)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
 (add-hook 'ruby-mode-hook
           (lambda()
             (electric-indent-mode 1)
