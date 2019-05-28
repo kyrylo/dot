@@ -18,6 +18,6 @@ changed = `git status --porcelain`.
 
 exit if changed.empty?
 
-result = `npm run lint`
+result = `npm run lint -- --fix`
 puts result unless $?.success?
 exit $?.exitstatus
