@@ -91,4 +91,4 @@ esac
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
-chruby 2.5.7
+chruby 2.7.0
