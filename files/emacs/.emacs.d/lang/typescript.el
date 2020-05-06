@@ -5,3 +5,4 @@
         indent-tabs-mode nil))
 
 (add-hook 'typescript-mode-hook #'setup-typescript)
+(add-hook 'typescript-mode-hook 'prettier-js-mode)
