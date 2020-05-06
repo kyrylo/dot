@@ -4,6 +4,8 @@
   (semantic-mode 1)
   (flycheck-mode 1))
 
+(setq-default c-basic-offset 4
+              indent-tabs-mode nil)
 ;; (setq-default c-default-style "linux"
 ;;               c-basic-offset 8
 ;;               tab-width 8
