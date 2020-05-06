@@ -25,3 +25,5 @@
 (depends-on "rust-mode")
 (depends-on "vue-mode")
 (depends-on "prettier-js")
+(depends-on "lsp-mode")
+(depends-on "rjsx-mode")
