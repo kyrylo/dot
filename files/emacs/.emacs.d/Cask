@@ -18,6 +18,7 @@
 (depends-on "web-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "zenburn-theme")
+(depends-on "gruvbox-theme")
 (depends-on "json-mode")
 (depends-on "magit")
 (depends-on "jade-mode")
