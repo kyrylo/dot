@@ -91,4 +91,6 @@ esac
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
-chruby 2.7.0
+ANSIBLE_STDOUT_CALLBACK=debug
+
+chruby 2.7.1

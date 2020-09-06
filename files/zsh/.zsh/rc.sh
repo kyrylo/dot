@@ -118,6 +118,3 @@ case $OSTYPE in
       . /usr/share/chruby/chruby.sh
     ;;
 esac
-
-# rustup
-. $HOME/.cargo/env
