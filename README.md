@@ -12,4 +12,5 @@ Installation
 
 ```sh
 make install
+git submodule update --init
 ```
