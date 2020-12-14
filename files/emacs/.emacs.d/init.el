@@ -33,6 +33,7 @@
       speedbar-show-unknown-files t)
 (global-set-key (kbd "C-x p") 'speedbar-get-focus)
 
+(desktop-save-mode 1)
 ;;
 ;; EDITING
 ;;
@@ -162,5 +163,3 @@
                   (interactive)
                   (save-excursion (mark-whole-buffer)
                   (indent-region (region-beginning) (region-end)))))
-
-(desktop-save-mode 1)
