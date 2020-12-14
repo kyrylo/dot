@@ -138,18 +138,18 @@
 ;;
 ;; JavaScript
 ;;
-(defun prettier-js-defaults-hook ()
-  (setq prettier-js-args '(
-                           "--no-semi"
-                           "--single-quote"
-                           "--trailing-comma" "es5"
-                           "--arrow-parens" "always")))
+;; (defun prettier-js-defaults-hook ()
+;;   (setq prettier-js-args '(
+;;                            "--no-semi"
+;;                            "--single-quote"
+;;                            "--trailing-comma" "es5"
+;;                            "--arrow-parens" "always")))
 
 (add-hook 'js-mode-hook 'prettier-js-mode)
-(add-hook 'js-mode-hook 'prettier-js-defaults-hook)
+;; (add-hook 'js-mode-hook 'prettier-js-defaults-hook)
 
 (add-hook 'vue-mode-hook 'prettier-js-mode)
-(add-hook 'vue-mode-hook 'prettier-js-defaults-hook)
+;; (add-hook 'vue-mode-hook 'prettier-js-defaults-hook)
 
 ;;
 ;; MISC
@@ -162,3 +162,5 @@
                   (interactive)
                   (save-excursion (mark-whole-buffer)
                   (indent-region (region-beginning) (region-end)))))
+
+(desktop-save-mode 1)
