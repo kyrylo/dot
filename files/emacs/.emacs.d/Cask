@@ -28,3 +28,4 @@
 (depends-on "prettier-js")
 (depends-on "lsp-mode")
 (depends-on "rjsx-mode")
+(depends-on "company")
