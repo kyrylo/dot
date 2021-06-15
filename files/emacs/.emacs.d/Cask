@@ -10,7 +10,6 @@
 (depends-on "ruby-end")
 (depends-on "ruby-tools")
 (depends-on "rspec-mode")
-(depends-on "inf-ruby")
 
 (depends-on "scss-mode")
 (depends-on "yaml-mode")
@@ -21,7 +20,6 @@
 (depends-on "gruvbox-theme")
 (depends-on "json-mode")
 (depends-on "magit")
-(depends-on "jade-mode")
 (depends-on "typescript-mode")
 (depends-on "rust-mode")
 (depends-on "vue-mode")
