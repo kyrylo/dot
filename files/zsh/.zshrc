@@ -93,4 +93,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 export ANSIBLE_STDOUT_CALLBACK=debug
 
-chruby 2.7.1
+chruby 3.0.1
