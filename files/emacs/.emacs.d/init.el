@@ -33,7 +33,6 @@
       speedbar-show-unknown-files t)
 (global-set-key (kbd "C-x p") 'speedbar-get-focus)
 
-(desktop-save-mode 1)
 ;;
 ;; EDITING
 ;;
