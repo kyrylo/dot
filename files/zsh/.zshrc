@@ -64,7 +64,13 @@ alias mv='mv -v'
 alias tmux='tmux -2'
 alias ccat='pygmentize -g'
 
+# awsume
 alias awsume=". awsume"
+
+# Kubernetes
+alias kd='kubectl -n develop'
+alias kd-delete-all='kd delete deployment --all && kd delete service --all && kd delete job --all'
+alias hd='helm -n develop'
 
 #
 # COMPLETION
@@ -97,5 +103,7 @@ esac
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 export ANSIBLE_STDOUT_CALLBACK=debug
+
+source <(kubectl completion zsh)
 
 chruby 3.0.1
