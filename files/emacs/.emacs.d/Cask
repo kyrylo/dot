@@ -27,3 +27,4 @@
 (depends-on "lsp-mode")
 (depends-on "rjsx-mode")
 (depends-on "company")
+(depends-on "dockerfile-mode")
