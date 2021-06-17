@@ -20,6 +20,9 @@ export PATH="$HOME/.git-aliae/wip:$PATH"
 # Cask (http://cask.github.io)
 export PATH="$HOME/.cask/bin:$PATH"
 
+# Awsume
+export PATH="$HOME/.local/bin:$PATH"
+
 # Golang.
 export GOPATH="$HOME/Code/gocode"
 export PATH="$PATH:$GOPATH/bin"
@@ -60,6 +63,8 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias tmux='tmux -2'
 alias ccat='pygmentize -g'
+
+alias awsume=". awsume"
 
 #
 # COMPLETION
