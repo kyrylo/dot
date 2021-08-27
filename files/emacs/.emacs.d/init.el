@@ -127,7 +127,9 @@
 
 (add-hook 'rust-mode-hook
           (lambda()
-            (setq rust-format-on-save t)))
+            (setq rust-format-on-save t)
+            (setq lsp-rust-server 'rust-analyzer)))
+(add-hook 'rust-mode-hook 'lsp-deferred)
 
 ;;
 ;; CSS
