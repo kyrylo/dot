@@ -34,6 +34,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Node.js
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
+# LaTeX
+export PATH="/Library/TeX/texbin:$PATH"
+
 #
 # ALIASES
 #
@@ -106,4 +109,4 @@ export ANSIBLE_STDOUT_CALLBACK=debug
 
 source <(kubectl completion zsh)
 
-chruby 3.0.1
+chruby 3.1.2
