@@ -20,7 +20,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (column-number-mode t)
-(global-linum-mode t)
+(global-display-line-numbers-mode 1)
 
 (load-theme 'zenburn t)
 (set-frame-font "PragmataPro for Powerline-11")
