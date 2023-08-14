@@ -23,7 +23,7 @@
 [color "grep"]
 	match = 166 bold
 [core]
-	editor = emacs -nw
+	editor = nvim # emacs -nw
 	quotepath = false
 [merge]
 	tool = meld

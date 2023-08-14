@@ -26,7 +26,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Golang.
 export GOPATH="$HOME/Code/gocode"
 export PATH="$PATH:$GOPATH/bin"
-export GOAB_DIR="$GOPATH/src/github.com/airbrake/goab"
 
 # Rustup
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -36,6 +35,9 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # LaTeX
 export PATH="/Library/TeX/texbin:$PATH"
+
+# Postgres
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
 
 #
 # ALIASES
@@ -109,4 +111,4 @@ export ANSIBLE_STDOUT_CALLBACK=debug
 
 source <(kubectl completion zsh)
 
-chruby 3.1.2
+chruby 3.3.0
