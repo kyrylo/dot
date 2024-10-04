@@ -31,7 +31,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Node.js
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="$(npm config --global get prefix)/bin:$PATH"
 
 # LaTeX
 export PATH="/Library/TeX/texbin:$PATH"
@@ -111,4 +111,4 @@ export ANSIBLE_STDOUT_CALLBACK=debug
 
 source <(kubectl completion zsh)
 
-chruby 3.3.0
+chruby 3.3.5
